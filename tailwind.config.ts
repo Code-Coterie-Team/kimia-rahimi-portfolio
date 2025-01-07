@@ -18,10 +18,10 @@ export default {
         dark_border:"rgb(27,30,46)"
       },
       gridTemplateColumns:{
-        custom:"1r 1fr 1fr"
+        custom:"10% 20% 70%"
       },
       gridTemplateRows: {
-        custom : "2fr 3fr 1fr"
+        custom : "20% 75% 5%"
           
       },
     },
