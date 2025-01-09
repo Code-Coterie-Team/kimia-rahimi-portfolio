@@ -1,20 +1,28 @@
+import { Close, Horizontalwindow, Maximize, Minimize, Verticalwindow, VsSvg, Window } from "@/icons";
+
 const Header = ()=>{
+
+const Menu = ["File" ,"Edit","Selection","View","Go","Run","Terminal","Help"]
+
     return(
         <div className=" flex justify-between items-center text-gray-400 border-b-2 border-dark_border p-1">
             <div className="flex justify-between p-1">
-              <button className="py-1 px-2 rounded-lg hover:bg-gray-300/10">File</button>
-              <button className="py-1 px-2 rounded-lg hover:bg-gray-300/10">Edit</button>
-              <button className="py-1 px-2 rounded-lg hover:bg-gray-300/10">Selection</button>
-              <button className="py-1 px-2 rounded-lg hover:bg-gray-300/10">View</button>
-              <button className="py-1 px-2 rounded-lg hover:bg-gray-300/10">Go</button>
-              <button className="py-1 px-2 rounded-lg hover:bg-gray-300/10">Run</button>
-              <button className="py-1 px-2 rounded-lg hover:bg-gray-300/10">Terminal</button>
-              <button className="py-1 px-2 rounded-lg hover:bg-gray-300/10">Help</button>
+              <VsSvg/>
+              {Menu.map((item:string,index)=>(
+               <button className="py-1 px-2 rounded-lg hover:bg-gray-300/10" key={index}>{item}</button>
+              ))}
             </div>
             <div>
                 <span>Kimia Rahimi - Portfolio</span>
             </div>
-            <div className="flex justify-between p-1"></div>
+            <div className="flex justify-between gap-2">
+                <button  className="p-1 rounded-lg hover:bg-gray-300/10"><Window /></button>
+                <button className="p-1 rounded-lg hover:bg-gray-300/10"><Horizontalwindow/></button>
+                <button className="p-1 rounded-lg hover:bg-gray-300/10"><Verticalwindow/></button>
+                <button className="p-3 hover:bg-gray-300/10"><Minimize/></button>
+                <button className="p-3 hover:bg-gray-300/10"><Maximize/></button>
+                <button className="p-3 hover:bg-red-700 hover:text-white"><Close/></button>
+            </div>
         </div>
     )
 }

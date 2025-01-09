@@ -13,17 +13,19 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        buttons:"rgb(169, 177, 214)"
       },
       borderColor:{
         dark_border:"rgb(27,30,46)"
       },
       gridTemplateColumns:{
-        custom:"10% 20% 70%"
+        custom:"5% 20% 75%"
       },
       gridTemplateRows: {
-        custom : "20% 75% 5%"
+        custom : "7% 88% 3%"
           
       },
+
     },
   },
   plugins: [],
