@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono  } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Toolsbar from "@/components/Toolsbar";
-import Header from "@/components/Header";
-import Explorer from "@/components/Explorer";
-import Footer from "@/components/Footer";
+import Toolsbar from "@/app/components/Toolsbar";
+import Header from "@/app/components/Header";
+import Explorer from "@/app/components/Explorer";
+import Footer from "@/app/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,14 +31,22 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-    <div className="grid grid-cols-custom grid-rows-custom h-screen overflow-hidden">
-     <div className="col-span-3"><Header/></div>
-     <Toolsbar/>
-     <Explorer/>
-     <div className=" overflow-y-auto h-screen " style={{ minHeight: '1500 px'}}>{children}</div>
-     <div className="col-span-3"><Footer/></div>
-    </div>
-
+        <div className="grid grid-cols-custom grid-rows-custom h-screen overflow-hidden">
+          <div className="col-span-3">
+            <Header />
+          </div>
+          <Toolsbar />
+          <Explorer />
+          <div
+            className=" overflow-y-auto h-screen "
+            style={{ minHeight: "1500 px" }}
+          >
+            {children}
+          </div>
+          <div className="col-span-3">
+            <Footer />
+          </div>
+        </div>
       </body>
     </html>
   );

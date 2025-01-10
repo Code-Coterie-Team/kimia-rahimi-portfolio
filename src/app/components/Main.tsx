@@ -8,10 +8,7 @@ const Main = () => {
         <Headercontent />
       </div>
       <div className="h-screen overflow-auto w-full">
-        <div className="flex items-center px-7 h-full">
             <Aboutme/>
-            </div>
-
       </div>
     </div>
   );
