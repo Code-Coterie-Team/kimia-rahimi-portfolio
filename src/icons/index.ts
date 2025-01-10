@@ -21,6 +21,10 @@ import Cross from "./cross.svg"
 import Warning from "./warning.svg"
 import GoLive from "./golive.svg"
 import Notification from "./notification.svg"
+import Star from "./star.svg"
+import Changes from "./changes.svg"
+import Linkedin from './linkedin.svg'
+import Github from "./github.svg"
 
 
 
@@ -53,6 +57,6 @@ export {
     Cross,
     Warning,
     GoLive,
-    Notification
+    Notification , Star ,Changes,Linkedin ,Github
 
 }

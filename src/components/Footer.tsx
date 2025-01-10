@@ -4,7 +4,7 @@ const Footer = ()=>{
     return(
         <div className=" flex justify-between items-center text-gray-400 text-sm border-t-2 border-dark_border">
             <div className="flex justify-between items-center gap-4">
-                <div className="bg-blue-600 p-2">
+                <div className="bg-blue-500 text-white p-2 hover:bg-gray-600">
                 <RemoteWindow/>
                 </div>
                 <div className="hover:bg-gray-300/10 py-1 px-2 flex gap-1 items-center">
