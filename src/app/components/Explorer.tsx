@@ -6,8 +6,10 @@ import { useState } from "react";
 const Explorer = () => {
 
 
- const [showPortfolio,setShowPortfolio] = useState(false)
-
+ const [showPortfolioItems,setshowPortfolioItems] = useState(false)
+const toggleItems = ()=>{
+  setshowPortfolioItems((currentState) => !currentState);
+}
 
   return (
     <div className="border-r-2 border-dark_border relative ">
@@ -25,13 +27,13 @@ const Explorer = () => {
             </div>
             <span className=" font-extrabold">Open Editors</span>
           </button>
-          <button className="border-b-2 border-dark_border flex gap-1 py-1" onClick={()=>setShowPortfolio(true)}>
+          <button className="border-b-2 border-dark_border flex gap-1 py-1" onClick={toggleItems}>
             <div>
               <Arrow />
             </div>
             <span className=" font-extrabold">Portfolio</span>
           </button>
-          {showPortfolio && <Portfolioitems/>}
+          {showPortfolioItems && <Portfolioitems/>}
           <button className="border-b-2 border-dark_border flex gap-1 py-1">
             <div>
               <Arrow />
