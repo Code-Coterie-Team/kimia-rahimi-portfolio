@@ -1,7 +1,6 @@
 import { Arrow, More } from "@/icons";
 
 const Explorer = () => {
-  const explorerItem = ["Open Editors", "Portfolio", "Outline", "Timeline"];
   return (
     <div className="border-r-2 border-dark_border relative ">
       <div className="flex flex-col gap-2 text-gray-400 text-sm pt-5 ">
@@ -12,20 +11,35 @@ const Explorer = () => {
           </div>
         </div>
         <div className="flex flex-col">
-          {explorerItem.map((items: string, index) => (
-            <div
-              className="border-b-2 border-dark_border flex gap-1 py-1"
-              key={index}
-            >
-              <div>
-                <Arrow />
-              </div>
-              <span className=" font-extrabold">{items}</span>
+          <div className="border-b-2 border-dark_border flex gap-1 py-1">
+            <div>
+              <Arrow />
             </div>
-          ))}
-          <div className="flex gap-1">
-            <Arrow />
-            <span className=" font-extrabold">Scripts</span>
+            <span className=" font-extrabold">Open Editors</span>
+          </div>
+          <div className="border-b-2 border-dark_border flex gap-1 py-1">
+            <div>
+              <Arrow />
+            </div>
+            <span className=" font-extrabold">Portfolio</span>
+          </div>
+          <div className="border-b-2 border-dark_border flex gap-1 py-1">
+            <div>
+              <Arrow />
+            </div>
+            <span className=" font-extrabold">Outline</span>
+          </div>
+          <div className="border-b-2 border-dark_border flex gap-1 py-1">
+            <div>
+              <Arrow />
+            </div>
+            <span className=" font-extrabold">Timeline</span>
+          </div>
+          <div>
+            <div className="flex gap-1">
+              <Arrow />
+              <span className=" font-extrabold">Scripts</span>
+            </div>
           </div>
         </div>
       </div>
