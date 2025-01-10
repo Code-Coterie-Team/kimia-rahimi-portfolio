@@ -13,9 +13,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        buttons:"rgb(169, 177, 214)"
-      },
-      borderColor:{
+        buttons:"rgb(169, 177, 214)",
         dark_border:"rgb(27,30,46)"
       },
       gridTemplateColumns:{

@@ -26,6 +26,16 @@ import Changes from "./changes.svg"
 import Linkedin from './linkedin.svg'
 import Github from "./github.svg"
 import Go from "./go.svg"
+import Nexticon from "./nexticon.svg"
+import Nodemodule from "./nodemodule.svg"
+import Public from "./public.svg"
+import Src from "./src.svg"
+import EslintSvg from "./eslint.svg"
+import GitignoreSvg from "./gitignore.svg"
+import NextConfigSvg from "./nextconfig.svg"
+import PackageLockSvg from "./packagelock.svg"
+import TailwindSvg from "./tailwind.svg"
+import TsConfigSvg from "./tsconfig.svg"
 
 
 
@@ -58,6 +68,11 @@ export {
     Cross,
     Warning,
     GoLive,
-    Notification , Star ,Changes,Linkedin ,Github,Go
+    Notification , Star ,Changes,Linkedin ,Github,Go,Nexticon,Nodemodule,Public,Src,EslintSvg,GitignoreSvg,
+    NextConfigSvg,
+    PackageLockSvg,
+    TailwindSvg,
+    TsConfigSvg
+
 
 }
