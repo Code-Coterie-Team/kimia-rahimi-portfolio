@@ -29,10 +29,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="min-h-screen max-h-screen">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-hidden`}
       >
         <div className="grid grid-cols-custom grid-rows-custom h-screen overflow-hidden">
-          <div className="col-span-3">
+          <div className="col-span-3 overflow-hidden">
             <Header />
           </div>
           <Toolsbar />

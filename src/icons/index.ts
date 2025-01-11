@@ -36,6 +36,11 @@ import NextConfigSvg from "./nextconfig.svg"
 import PackageLockSvg from "./packagelock.svg"
 import TailwindSvg from "./tailwind.svg"
 import TsConfigSvg from "./tsconfig.svg"
+import WorkexperienceSvg from "./work.svg"
+import SkillsSvg from "./skills.svg"
+import MyworkSvg from "./mywork.svg"
+import ContactSvg from "./contact.svg"
+import AbouticonSvg from "./abouticon.svg"
 
 
 
@@ -72,7 +77,12 @@ export {
     NextConfigSvg,
     PackageLockSvg,
     TailwindSvg,
-    TsConfigSvg
+    TsConfigSvg,
+    WorkexperienceSvg,
+    SkillsSvg,
+    MyworkSvg,
+    ContactSvg,
+    AbouticonSvg
 
 
 }

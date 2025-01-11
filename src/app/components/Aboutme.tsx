@@ -1,3 +1,4 @@
+"use client"
 import { Github, Go, Linkedin } from "@/icons";
 import styles from './Aboutme.module.css';
 
@@ -30,7 +31,7 @@ const Aboutme = () => {
             target="blank"
           >
             <button>
-              <Linkedin />
+              <Linkedin width={24} />
             </button>
           </a>
           <a href="https://github.com/kimiaRahimi" target="blank">

@@ -1,8 +1,20 @@
+"use client"
 import { Arrow, EslintSvg, GitignoreSvg, NextConfigSvg, Nexticon, Nodemodule, PackageLockSvg, Public, Src, TailwindSvg, TsConfigSvg } from "@/icons"
+import Publicitems from "./Publicitems"
+import { useState } from "react"
 
 const Portfolioitems = ()=> {
+
+  const [showPublicItems,setShowPublicItems] = useState(false);
+
+
+  const toggleItems = ()=>{
+    setShowPublicItems((currentState) => !currentState)
+  }
+
+
   return (
-    <div className="w-full flex flex-col text-base ">
+    <div className="w-full flex flex-col text-base overflow-y-auto ">
         <div>
         <button className=" flex gap-1 py-1 hover:bg-dark_border w-full px-4">
             <div>
@@ -18,13 +30,16 @@ const Portfolioitems = ()=> {
             <Nodemodule/>
             <span className="text-gray-300/40">node_modules</span>
           </button>
-          <button className=" flex gap-1 py-1 hover:bg-dark_border w-full px-4">
+          <button className=" flex gap-1 py-1 hover:bg-dark_border w-full px-4" onClick={toggleItems}>
             <div>
               <Arrow />
             </div>
             <Public/>
             <span className="text-gray-400">public</span>
           </button>
+
+          {showPublicItems && <Publicitems/>}
+
           <button className=" flex gap-1 py-1 hover:bg-dark_border w-full px-4">
             <div>
               <Arrow />
