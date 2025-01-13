@@ -1,8 +1,8 @@
-import Main from "@/app/components/Main";
+import Main from "@/components/Main";
 
 export default function Home() {
   return (
-    <div>
+    <div className="">
       <Main />
     </div>
   );
