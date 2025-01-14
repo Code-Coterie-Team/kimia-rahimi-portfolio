@@ -7,7 +7,7 @@ import LinkedinIcon from "@/icons/LinkedinIcon";
 /* eslint-disable react/no-unescaped-entities */
 const Aboutme = () => {
   return (
-    <div className="h-full w-full flex items-center">
+    <div className="h-full w-full pt-20">
       <div className="flex flex-col gap-5 text-white px-7 pb-20">
         <div>
           <h1 className="text-6xl font-medium">
@@ -27,23 +27,23 @@ const Aboutme = () => {
             who just started <br /> Front-End development.
           </span>
         </div>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-5">
           <a
-            href="https://www.linkedin.com/in/kimia-rahimi-a38a891a5/"
+            href="https://www.linkedin.com/in/kimia-rahimi/"
             target="blank"
           >
             <button>
-              <LinkedinIcon width={24} />
+              <LinkedinIcon width={24} height={24} />
             </button>
           </a>
           <a href="https://github.com/kimiaRahimi" target="blank">
             <button>
-              <GithubIcon />
+              <GithubIcon width={24} height={24} className='text-white' />
             </button>
           </a>
           <a href="">
             <button className="flex gap-1 bg-zinc-100 py-1 px-3 text-zinc-900 items-center rounded-full text-sm">
-              <span>Contact Me</span>
+              <span className='font-medium'>Contact Me</span>
               <GoIcon className="size-5" />
             </button>
           </a>

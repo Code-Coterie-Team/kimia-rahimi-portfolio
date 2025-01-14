@@ -15,7 +15,8 @@ export default {
         foreground: "var(--foreground)",
         buttons:"rgb(169, 177, 214)",
         dark_border:"rgb(27,30,46)",
-        public_button : "rgb(61, 185, 201)"
+        public_button : "rgb(61, 185, 201)",
+        profile_color:"rgba(126,231,135)"
       },
       gridTemplateColumns:{
         custom:"5% 20% 75%"

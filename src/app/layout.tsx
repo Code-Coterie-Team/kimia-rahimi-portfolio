@@ -45,7 +45,6 @@ export default function RootLayout({
             </div>
             <div
               className=" overflow-y-auto h-full "
-              // style={{ minHeight: "1500 px" }}
             >
               {children}
             </div>
