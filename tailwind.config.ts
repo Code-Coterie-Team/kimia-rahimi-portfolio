@@ -19,7 +19,8 @@ export default {
         profile_color:"rgba(126,231,135)"
       },
       gridTemplateColumns:{
-        custom:"5% 20% 75%"
+        custom:"5% 20% 75%",
+        experience:"1fr 3fr"
       },
       gridTemplateRows: {
         custom : "7% 88% 3%"

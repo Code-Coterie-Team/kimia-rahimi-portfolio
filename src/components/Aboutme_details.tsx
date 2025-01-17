@@ -22,10 +22,11 @@ const Aboutme_details = () => {
       <div className="text-5xl pt-5 pb-7">
         <span className="text-white">
           {" "}
-          I'm a junior <span className="text-profile_color">
-            Front-End
+          I'm a <span className="text-profile_color">
+          software developer
           </span>{" "}
-          Developer
+          specialized <br /> on 
+          <span className="text-profile_color"> Web Applications</span>
         </span>
       </div>
       <div className="flex gap-44">
