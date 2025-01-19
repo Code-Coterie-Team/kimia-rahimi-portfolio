@@ -1,5 +1,6 @@
 import Aboutme from "./Aboutme";
 import Aboutme_details from "./Aboutme_details";
+import Skills from "./Skills";
 import Workexperience from "./Workexperience";
 
 const Main = () => {
@@ -8,6 +9,7 @@ const Main = () => {
             <Aboutme/>
             <Aboutme_details/>
             <Workexperience/>
+            <Skills/>
       </div>
 
   );

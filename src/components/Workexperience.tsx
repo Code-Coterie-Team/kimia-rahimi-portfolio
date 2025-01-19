@@ -29,8 +29,8 @@ const Workexperience = () => {
         </span>
       </div>
       <div className=" px-2">
-      <Experience date='JUN 2023-PRESENT' imageSrc={nosa} company="CodeCoterie" position='Frontend Developer' description={['Developed and maintained React  components, screens','Developed front-end user interface using React,Tailwind and JavaScript for Web Apps','Collaborated with other developers to implement new features in a way that is consistent with existing codebase conventions.'] } />
-      <Experience date='JUN 2023-PRESENT' imageSrc={codecoterie} company="CodeCoterie" position='Frontend Developer' description={['Developed and maintained React Native components, screens, and features for the mobile app using TDD practices', 'Developed front-end user interface using React, React Native and JavaScript for Web Apps', 'Collaborated with other developers to implement new features in a way that is consistent with existing codebase conventions.']} />
+      <Experience date='JUN 2023-PRESENT' imageSrc={codecoterie} company="CodeCoterie" position='Frontend Developer' description={['Developed front-end user interface using React, Tailwind, Next and JavaScript for Web Apps','Collaborated with other developers to implement new features in a way that is consistent with existing codebase conventions.'] } />
+      <Experience date='Oct 2022-PRESENT' imageSrc={nosa} company="Nosa" position='Software Expert ' description={['Software accounting expert and support for the integrated Nosa software at the Iran Software and Hardware Company.', 'Specialist in the payroll module of the Nosa software and Development of Payroll and Compensation Calculations.']} />
 
       </div>
     </div>

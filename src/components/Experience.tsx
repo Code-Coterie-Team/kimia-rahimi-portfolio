@@ -1,8 +1,8 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface IDetails{
     date:string;
-    imageSrc: string;
+    imageSrc: StaticImageData;
     company: string;
     position:string;
     description:string[];
@@ -16,12 +16,12 @@ const Experience = ({date,imageSrc,company,position,description}:IDetails)=> {
            alt="Experience" width={100} height={100}/>
         </div>
         <div className="flex flex-col gap-3">
-          <span className="text-red-300 text-base">{company}|{position}</span>
-          <div className="flex flex-col gap-2 content-center">
-                                {description.map((desc,index)=>(
+          <span className="text-red-300 text-lg">{company} | {position}</span>
+          <div className="flex flex-col gap-3 content-center">
+                                {description.map((item,index)=>(
                                     <div className="flex gap-1 items-center"  key={index}>
                                       <div className="size-1 rounded-full bg-gray-400" ></div>
-                                       <p className="text-gray-400">{desc}</p>
+                                       <p className="text-gray-400">{item}</p>
                                     </div>
                                 ))}
                             <div className="flex gap-2 w-full py-7 ">
