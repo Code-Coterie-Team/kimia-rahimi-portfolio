@@ -32,7 +32,7 @@ const Publicitems = ()=> {
             <span className="text-gray-400">My Work</span>
           </button>
           <button className=" flex gap-1 py-1 hover:bg-dark_border w-full px-14">
-            <ContactIcon/>
+            <ContactIcon className="text-[#42a5f5]"/>
             <span className="text-gray-400">Contact Me</span>
           </button>
           </div>

@@ -47,8 +47,8 @@ useEffect(() => {
       </div>
       <div className="flex gap-24 pt-10">
         <div className=" relative size-80 rounded-full flex justify-center items-center" style={{backgroundColor:color}}>
-           <div className="bg-transparent absolute size-10/12">
-           <div className="absolute size-full rounded-full bg-gray-800 grid grid-cols-2 gap-3 rotate-45">
+           <div className="bg-transparent absolute z-10 size-10/12">
+           <div className="absolute size-full rounded-full bg-gray-800 grid grid-cols-2 grid-rows-2 gap-3 rotate-45 ">
             <button onClick={() => {setShowLanguage(true);setShowFront(false);setShowTools(false);}}>
                 <p className="text-3xl text-white font-semibold w-min -rotate-45 -translate-x-2">Languages
                     <span className=" -z-10 bg-[#525df3] absolute bottom-0 left-0 right-0 w-full h-4">
