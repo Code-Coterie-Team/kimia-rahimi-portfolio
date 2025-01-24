@@ -1,9 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
-import ArrowIcon from "@/icons/ArrowIcon"
 import WorksIcon from "@/icons/WorksIcon"
 import invoices from "@/assets/invoices.png"
-import Image from "next/image"
 import estate from "@/assets/estate.png"
+import Myproject from "./Myproject"
 
 
 const Mywork = ()=> {
@@ -27,32 +26,8 @@ const Mywork = ()=> {
       </span>
     </div>
     <div className="grid grid-row-2 gap-10 w-11/12 justify-center">
-       <div className=" border border-gray-500/20 bg-gray-900/20 rounded-2xl hover:shadow-md  hover:shadow-yellow-200 grid grid-cols-2">
-        <div className="p-12 text-3xl flex flex-col gap-20">
-          <div><span className="text-yellow-200">The "Invoices" <span className="text-white"> program is an efficient tool for managing quotes.</span></span></div>
-          <div className="text-white flex items-center gap-2">
-            <button className="text-2xl font-semibold">Learn more</button>
-            <ArrowIcon className="text-4xl"/>
-          </div>
-        </div>
-        <div>
-          <Image src={invoices} alt="invoices" className="h-full rounded-tr-2xl rounded-br-2xl"/>
-        </div>
-
-      </div>
-      <div className=" border border-gray-500/20 bg-gray-900/20 rounded-2xl hover:shadow-md  hover:shadow-yellow-200 grid grid-cols-2">
-        <div className="p-12 text-3xl flex flex-col gap-20">
-          <div><span className="text-yellow-200">The "Estate-landing-page" <span className="text-white"> that allows users to easily view information about estate.</span></span></div>
-          <div className="text-white flex items-center gap-2">
-            <button className="text-2xl font-semibold">Learn more</button>
-            <ArrowIcon className="text-4xl"/>
-          </div>
-        </div>
-        <div>
-          <Image src={estate} alt="invoices" className="h-full rounded-tr-2xl rounded-br-2xl"/>
-        </div>
-
-      </div>
+      <Myproject title="The 'Invoices'" description="program is an efficient tool for managing quotes." image={invoices}/>
+      <Myproject title="The 'Estate-landing-page'" description="that allows users to easily view information about estate." image={estate}/>
     </div>
     </div>
   )
