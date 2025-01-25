@@ -12,13 +12,18 @@ import PublicIcon from "@/icons/PublicIcon";
 import SrcIcon from "@/icons/SrcIcon";
 import TailwindIcon from "@/icons/TailwindIcon";
 import TsconfigIcon from "@/icons/TsconfigIcon";
+import Scritems from "./Scritems";
 
 const Portfolioitems = () => {
   const [showPublicItems, setShowPublicItems] = useState(false);
+  const [showSrcItems, setShowSrcItems] = useState(false);
 
   const toggleItems = () => {
     setShowPublicItems((currentState) => !currentState);
   };
+  const toggleSrcItems = ()=>{
+    setShowSrcItems((currentState)=>!currentState)
+  }
 
   return (
     <div className="w-full flex flex-col text-base overflow-y-auto ">
@@ -50,14 +55,16 @@ const Portfolioitems = () => {
 
         {showPublicItems && <Publicitems />}
 
-        <button className=" flex gap-1 py-1 hover:bg-dark_border w-full px-4">
+        <button className=" flex gap-1 py-1 hover:bg-dark_border w-full px-4" onClick={toggleSrcItems}>
           <div>
             <ArrowIcon />
           </div>
           <SrcIcon />
           <span className="text-gray-400">src</span>
         </button>
+        {showSrcItems && <Scritems/>}
       </div>
+
       <div>
         <button className=" flex gap-1 py-1 hover:bg-dark_border w-full px-8">
           <EslintIcon/>

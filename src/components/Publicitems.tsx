@@ -58,12 +58,16 @@ const Publicitems = () => {
     }, 1000);
   }, []);
 
+  const toggleState=()=>{
+    setShowAboutItems((currentState)=>!currentState)
+  }
+
   return (
     <div className="flex flex-col w-full text-base">
       <div>
         <button
           className=" flex gap-1 py-1 hover:bg-dark_border w-full px-8 bg-gray-600/40"
-          onClick={() => setShowAboutItems(true)}
+          onClick={toggleState}
         >
           <StarIcon />
           <span className="text-gray-400">about_me.ts</span>

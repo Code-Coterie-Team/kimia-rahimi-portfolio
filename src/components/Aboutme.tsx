@@ -3,6 +3,7 @@ import styles from './Aboutme.module.css';
 import GithubIcon from "@/icons/GithubIcon";
 import GoIcon from "@/icons/GoIcon";
 import LinkedinIcon from "@/icons/LinkedinIcon";
+import Link from 'next/link';
 
 /* eslint-disable react/no-unescaped-entities */
 const Aboutme = () => {
@@ -42,10 +43,10 @@ const Aboutme = () => {
             </button>
           </a>
           <a href="">
-            <button className="flex gap-1 bg-zinc-100 py-1 px-3 text-zinc-900 items-center rounded-full text-sm">
+            <Link href={"/#contact"} className="flex gap-1 bg-zinc-100 py-1 px-3 text-zinc-900 items-center rounded-full text-sm">
               <span className='font-medium'>Contact Me</span>
               <GoIcon className="size-5" />
-            </button>
+            </Link>
           </a>
         </div>
       </div>
