@@ -27,7 +27,7 @@ export const useStore=create<IStoreState>((set)=>({
               set(() => ({
                   links: newLinks,
               })),
-        
-
-         
+            showExplore:true,
+            setShowExplore:(value)=>set({showExplore: value})
+  
 }))

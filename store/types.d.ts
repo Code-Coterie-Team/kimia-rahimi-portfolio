@@ -15,4 +15,7 @@ interface Link{
    links:Link[];
    addLink:(newlink:Link)=>void;
    setLinks: (newLinks:Link[]) => void;
+   showExplore:boolean;
+   setShowExplore:(value:boolean)=> void;
+
  }

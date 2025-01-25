@@ -1,14 +1,15 @@
 "use client"
-import { Arrow, More } from "@/icons";
+
 import Portfolioitems from "./Portfolioitems";
 import { useState } from "react";
 import ArrowIcon from "@/icons/ArrowIcon";
 import MoreIcon from "@/icons/MoreIcon";
+import { useStore } from "../../store/useSection";
 
 const Explorer = () => {
 
-
- const [showPortfolioItems,setshowPortfolioItems] = useState(false)
+  const showExplore = useStore((state) => state.showExplore) 
+ const [showPortfolioItems,setshowPortfolioItems] = useState(true)
 const toggleItems = ()=>{
   setshowPortfolioItems((currentState) => !currentState);
 }
@@ -16,7 +17,9 @@ const toggleItems = ()=>{
   return (
     <div className="border-r-2 border-dark_border relative overflow-hidden h-full">
       <div className="flex flex-col gap-2 text-gray-400 text-sm pt-5 overflow-hidden h-full ">
-        <div className=" flex justify-between px-3">
+       {showExplore && 
+       <>
+               <div className=" flex justify-between px-3">
           <span className="text-xs">EXPLORER</span>
           <div className="p-1 rounded-lg hover:bg-gray-300/10">
             <MoreIcon />
@@ -55,6 +58,8 @@ const toggleItems = ()=>{
             </div>
           </button>
         </div>
+       </>
+       }
       </div>
     </div>
   );
