@@ -28,6 +28,13 @@ export const useStore=create<IStoreState>((set)=>({
                   links: newLinks,
               })),
             showExplore:true,
-            setShowExplore:(value)=>set({showExplore: value})
+            setShowExplore:(value)=>set({showExplore: value}),
+            openProject:" ",
+            setOpenProject:(value)=>set({openProject: value}),
+            activeLink:" ",
+            setActiveLink:(href)=>set({activeLink: href}),
+
+
+        
   
 }))

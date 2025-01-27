@@ -17,5 +17,9 @@ interface Link{
    setLinks: (newLinks:Link[]) => void;
    showExplore:boolean;
    setShowExplore:(value:boolean)=> void;
+   openProject : string;
+   setOpenProject:(value:string)=>void;
+   activeLink:string;
+   setActiveLink:(href:string)=>void;
 
  }

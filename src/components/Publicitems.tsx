@@ -6,13 +6,12 @@ import StarIcon from "@/icons/StarIcon";
 import WorkIcon from "@/icons/WorkIcon";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { useStore } from "../../store/useSection";
 
 const Publicitems = () => {
-  const { stylePublic, changeStyle } = useStore();
   const [showAboutItems, setShowAboutItems] = useState(false);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [pathName, setPathName] = useState<string>("/#aboutme");
+  console.log(pathName);
   const items = [
     {
       title: "About Me",
@@ -52,15 +51,12 @@ const Publicitems = () => {
     };
   }, []);
 
-  useEffect(() => {
-    setTimeout(() => {
-      changeStyle();
-    }, 1000);
-  }, []);
 
   const toggleState=()=>{
     setShowAboutItems((currentState)=>!currentState)
   }
+
+ 
 
   return (
     <div className="flex flex-col w-full text-base">
@@ -80,7 +76,6 @@ const Publicitems = () => {
               <Link
                 key={index}
                 href={item.link}
-                style={stylePublic}
                 className="flex gap-1 py-1 hover:bg-dark_border w-full px-14"
               >
                 {item.icon}
