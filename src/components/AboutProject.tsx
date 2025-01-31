@@ -18,7 +18,7 @@ const AboutProject = ({
   image,
 }: IAbout) => {
   return (
-    <div className="h-full w-full">
+    <div className="h-full w-full" id="about">
       <div className="flex flex-col pt-14 justify-center items-center gap-32">
         <div className="flex flex-col gap-3 justify-center items-center pt-14">
           <span className="font-semibold text-base text-public_button">

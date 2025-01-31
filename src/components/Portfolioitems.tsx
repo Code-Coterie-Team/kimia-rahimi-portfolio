@@ -43,7 +43,7 @@ const Portfolioitems = () => {
           <span className="text-gray-300/40">node_modules</span>
         </button>
         <button
-          className=" flex gap-1 py-1 hover:bg-dark_border w-full px-4"
+          className=" flex gap-1 py-1 hover:bg-dark_border w-full px-4 "
           onClick={toggleItems}
         >
           <div>

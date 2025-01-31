@@ -6,12 +6,27 @@ import StarIcon from "@/icons/StarIcon";
 import WorkIcon from "@/icons/WorkIcon";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { useStore } from "../../store/useSection";
+
+
 
 const Publicitems = () => {
   const [showAboutItems, setShowAboutItems] = useState(false);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [pathName, setPathName] = useState<string>("/#aboutme");
-  console.log(pathName);
+  const {addLink} = useStore();
+const {links} = useStore();
+console.log({links});
+const {setActiveLink} = useStore();
+const handelAddLink = (name:string,href:string)=>{
+  const existlink=links.some((l)=>l.href===href);
+  if(!existlink){
+      addLink({ name, href });
+      setActiveLink(href);
+  }
+}
+
   const items = [
     {
       title: "About Me",
@@ -51,39 +66,50 @@ const Publicitems = () => {
     };
   }, []);
 
+  const toggleState = () => {
+    setShowAboutItems((currentState) => !currentState);
+  };
 
-  const toggleState=()=>{
-    setShowAboutItems((currentState)=>!currentState)
+  const sidebarMotion = {
+    hidden:{opacity:0},
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
   }
 
- 
+  const itemsMotion = {
+    hidden:{opacity:0,y:20},
+    visible:{opacity:1,y:0,transition:{ duration: 0.2}}
+  }
 
   return (
-    <div className="flex flex-col w-full text-base">
+    <div className="flex flex-col w-full text-base" >
       <div>
         <button
           className=" flex gap-1 py-1 hover:bg-dark_border w-full px-8 bg-gray-600/40"
-          onClick={toggleState}
+          onClick={()=>{toggleState();handelAddLink("About Me" , "#aboutme")}}
         >
           <StarIcon />
           <span className="text-gray-400">about_me.ts</span>
         </button>
       </div>
       {showAboutItems && (
-        <div>
+        <motion.div variants={sidebarMotion} initial="hidden" animate="visible">
           {items.map((item, index) => {
             return (
-              <Link
-                key={index}
-                href={item.link}
-                className="flex gap-1 py-1 hover:bg-dark_border w-full px-14"
-              >
-                {item.icon}
-                {item.title}
-              </Link>
+              <motion.div key={index} variants={itemsMotion} initial="hidden" animate="visible">
+                <Link
+                  href={item.link}
+                  className="flex gap-1 py-1 hover:bg-dark_border w-full px-14"
+                >
+                  {item.icon}
+                  {item.title}
+                </Link>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       )}
     </div>
   );
