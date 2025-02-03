@@ -42,12 +42,11 @@ const Aboutme = () => {
               <GithubIcon width={24} height={24} className='text-white' />
             </button>
           </a>
-          <a href="">
-            <Link href={"/#contact"} className="flex gap-1 bg-zinc-100 py-1 px-3 text-zinc-900 items-center rounded-full text-sm">
+            <Link href={"/#contact"} className="flex gap-1 bg-zinc-100 py-1 px-3 text-zinc-900 items-center rounded-full text-sm shadow-lg hover:shadow-white/20">
               <span className='font-medium'>Contact Me</span>
               <GoIcon className="size-5" />
             </Link>
-          </a>
+          
         </div>
       </div>
     </div>

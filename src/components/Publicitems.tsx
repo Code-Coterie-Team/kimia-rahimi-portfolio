@@ -19,6 +19,7 @@ const Publicitems = () => {
 const {links} = useStore();
 console.log({links});
 const {setActiveLink} = useStore();
+
 const handelAddLink = (name:string,href:string)=>{
   const existlink=links.some((l)=>l.href===href);
   if(!existlink){
@@ -86,13 +87,14 @@ const handelAddLink = (name:string,href:string)=>{
   return (
     <div className="flex flex-col w-full text-base" >
       <div>
-        <button
+        <Link
           className=" flex gap-1 py-1 hover:bg-dark_border w-full px-8 bg-gray-600/40"
           onClick={()=>{toggleState();handelAddLink("About Me" , "#aboutme")}}
+          href={"/#aboutme"}
         >
           <StarIcon />
           <span className="text-gray-400">about_me.ts</span>
-        </button>
+        </Link>
       </div>
       {showAboutItems && (
         <motion.div variants={sidebarMotion} initial="hidden" animate="visible">

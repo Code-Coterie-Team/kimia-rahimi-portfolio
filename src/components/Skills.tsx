@@ -18,7 +18,7 @@ import Myskills from "./Myskills";
 
 const Skills = () => {
 const [color, setColor] = useState('#ffffff');
-const [showLanguage,setShowLanguage] = useState(false);
+const [showLanguage,setShowLanguage] = useState(true);
 const [showFront,setShowFront] = useState(false);
 const [showTools,setShowTools] = useState(false);
 

@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+'use client'
 import ProfileIcon from "@/icons/ProfileIcon";
 import kimiarahimi from "@/assets/kimiaRahimi.jpg";
 import Image from "next/image";
@@ -6,8 +7,38 @@ import LinkedinIcon from "@/icons/LinkedinIcon";
 import GithubIcon from "@/icons/GithubIcon";
 import GoIcon from "@/icons/GoIcon";
 import university from "@/assets/university.jpg"
+import {motion, useMotionTemplate, useMotionValue, useSpring } from "framer-motion";
+import { useState } from "react";
 
 const Aboutme_details = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  const mouseXSpring = useSpring(mouseX);
+  const mouseYSpring = useSpring(mouseY);
+
+const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
+  const offsetX = event.nativeEvent.offsetX;
+  const offsetY = event.nativeEvent.offsetY;
+  const currentTarget = event.currentTarget;
+  const { width, height } = currentTarget.getBoundingClientRect();
+  mouseX.set((offsetX / width) * 100);
+  mouseY.set((offsetY / height) * 100);
+};
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+};
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    // why???
+    mouseX.set(0);    
+    mouseY.set(0);
+
+  };
+
+  const spotlightBackground = useMotionTemplate`radial-gradient(circle at ${mouseXSpring}% ${mouseYSpring}%,rgba(74, 222, 128,0.1),rgb(30 ,35, 54 ))`;
+
   return (
     <div className="w-full flex flex-col gap-8 px-10">
       <div className="flex gap-2 w-full py-7 ">
@@ -85,7 +116,15 @@ const Aboutme_details = () => {
             </a>
           </div>
         </div>
-        <div className="p-12 border border-gray-500/20 bg-gray-900/20 rounded-2xl hover:shadow-md  hover:shadow-profile_color">
+        <motion.div 
+                   className="p-12 border border-gray-500/20 bg-gray-900/20 rounded-2xl hover:shadow-md  hover:shadow-profile_color"
+                   onMouseEnter={handleMouseEnter}
+                   onMouseLeave={handleMouseLeave}
+                   onMouseMove={handleMouseMove}
+                   style={{
+                       background: isHovered ? spotlightBackground : "bg-gray-900/20",
+                   }}
+>
             <div className="flex gap-7">
               <Image src={university} alt="University" height={144} width={144} className="rounded-2xl"/>
               <div className="flex flex-col">
@@ -94,7 +133,7 @@ const Aboutme_details = () => {
               </div>
 
             </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -22,20 +22,20 @@ const ContactMe = ()=> {
     </div>
     <div>
         <form className="w-11/12 py-10 flex flex-col rounded-xl text-white text-base">
-        <div className="flex flex-col border border-gray-400/40 rounded-tl-lg rounded-tr-lg p-4 focus-within:border-blue-400 focus-within:border-2">
-            <label htmlFor="">Name</label>
+        <div className=" flex flex-col border border-gray-400/40 rounded-tl-lg rounded-tr-lg p-4 focus-within:border-blue-400 focus-within:border-2 group">
+            <label htmlFor="" className="relative group-focus-within:text-blue-400 group-focus-within:-top-2 group-focus-within:text-sm">Name</label>
             <input type="text" className="bg-transparent outline-none" />
         </div>
-        <div className="flex flex-col border border-gray-400/40 p-4 focus-within:border-blue-400 focus-within:border-2">
-            <label htmlFor="">Email</label>
+        <div className="flex flex-col border border-gray-400/40 p-4 focus-within:border-blue-400 focus-within:border-2 group">
+            <label htmlFor="" className="relative group-focus-within:text-blue-400 group-focus-within:-top-2 group-focus-within:text-sm">Email</label>
             <input type="text" className="bg-transparent outline-none" />
         </div>
-        <div className="flex flex-col border border-gray-400/40 p-4 focus-within:border-blue-400 focus-within:border-2">
-            <label htmlFor="">Company</label>
+        <div className="flex flex-col border border-gray-400/40 p-4 focus-within:border-blue-400 focus-within:border-2 group">
+            <label htmlFor="" className="relative group-focus-within:text-blue-400 group-focus-within:-top-2 group-focus-within:text-sm">Company</label>
             <input type="text" className="bg-transparent outline-none" />
         </div>
-        <div className="flex flex-col border border-gray-400/40 rounded-bl-lg rounded-br-lg p-4 focus-within:border-blue-400 focus-within:border-2">
-            <label htmlFor="">Message</label>
+        <div className="flex flex-col border border-gray-400/40 rounded-bl-lg rounded-br-lg p-4 focus-within:border-blue-400 focus-within:border-2 group">
+            <label htmlFor="" className="relative group-focus-within:text-blue-400 group-focus-within:-top-2 group-focus-within:text-sm">Message</label>
             <input type="text" className="bg-transparent outline-none" />
         </div>
         
