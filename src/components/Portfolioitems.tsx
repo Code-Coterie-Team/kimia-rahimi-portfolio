@@ -17,83 +17,119 @@ import Scritems from "./Scritems";
 const Portfolioitems = () => {
   const [showPublicItems, setShowPublicItems] = useState(false);
   const [showSrcItems, setShowSrcItems] = useState(false);
+  const [isArrowRotated, setIsArrowRotated] = useState(false);
 
-  const toggleItems = () => {
-    setShowPublicItems((currentState) => !currentState);
+  const toggleItems = (itemName: string) => {
+    if (itemName === "public") {
+      setShowPublicItems((currentState) => !currentState);
+    }
+    else if (itemName === "src") {
+      setShowSrcItems((currentState) => !currentState);
+    }
+   setIsArrowRotated((currentState)=>!currentState)
   };
-  const toggleSrcItems = ()=>{
-    setShowSrcItems((currentState)=>!currentState)
+
+
+  const firstItems = [
+    {
+    title: ".next",
+    icon: <NextIcon/>
+  },
+  {
+    title: "node_modules",
+    icon: <NodemoduleIcon/>
   }
+]
+const secondItems = [
+  {
+  title: "public",
+  icon: <PublicIcon/>
+},
+{
+  title: "src",
+  icon: <SrcIcon/>
+}
+]
+
+const lastItems = [
+  {
+    title: ".eslintrc.json",
+    icon: <EslintIcon/>
+  },
+  {
+    title: ".gitignore",
+    icon: <GitignoreIcon/>
+  },
+  {
+    title: "next.config.js",
+    icon: <NextConfigIcon/>
+  },
+  {
+    title: "package-lock.json",
+    icon: <PackagelockIcon/>
+  },
+  {
+    title: "package.json",
+    icon: <PackagelockIcon/>
+  },
+  {
+    title: "tailwind.config.ts",
+    icon: <TailwindIcon/>
+  },
+  {
+    title: "tsconfig.json",
+    icon: <TsconfigIcon/>
+  }
+]
 
   return (
     <div className="w-full flex flex-col text-base overflow-y-auto ">
       <div>
-        <button className=" flex gap-1 py-1 hover:bg-dark_border w-full px-4">
-          <div>
-            <ArrowIcon />
-          </div>
-          <NextIcon />
-          <span className="text-gray-300/40">.next</span>
-        </button>
-        <button className=" flex gap-1 py-1 hover:bg-dark_border w-full px-4">
-          <div>
-            <ArrowIcon />
-          </div>
-          <NodemoduleIcon />
-          <span className="text-gray-300/40">node_modules</span>
-        </button>
-        <button
-          className=" flex gap-1 py-1 hover:bg-dark_border w-full px-4 "
-          onClick={toggleItems}
-        >
-          <div>
-            <ArrowIcon />
-          </div>
-          <PublicIcon />
-          <span className="text-gray-400">public</span>
-        </button>
-
-        {showPublicItems && <Publicitems />}
-
-        <button className=" flex gap-1 py-1 hover:bg-dark_border w-full px-4" onClick={toggleSrcItems}>
-          <div>
-            <ArrowIcon />
-          </div>
-          <SrcIcon />
-          <span className="text-gray-400">src</span>
-        </button>
-        {showSrcItems && <Scritems/>}
+        {firstItems.map((item,index)=>(
+            <button className=" flex gap-1 py-1 hover:bg-dark_border w-full px-4" key={index}>
+                  <div>
+                    <ArrowIcon />
+                  </div>
+                  {item.icon}
+                  <span className="text-gray-300/40">{item.title}</span>
+                </button>
+        ))}
+        {secondItems.map((item,index)=>(
+         <div key={index}>
+              <button
+                  className=" flex gap-1 py-1 hover:bg-dark_border w-full px-4 "
+                  onClick={() => toggleItems(item.title)}
+                >
+                  <div 
+                    style={{
+                    transform: isArrowRotated
+                      ? "rotate(90deg)"
+                      : "rotate(0deg)", 
+                    transition: "transform 0.3s ease",
+                  }}>
+                    <ArrowIcon />
+                  </div>
+                  {item.icon}
+                  <span className="text-gray-400">{item.title}</span>
+            </button>
+            {item.title === "public" && showPublicItems && (
+                    <Publicitems />
+                  )}
+            {item.title === "src" && showSrcItems && (
+                    <Scritems />
+            )}
+         </div>
+        ))}
       </div>
 
       <div>
-        <button className=" flex gap-1 py-1 hover:bg-dark_border w-full px-8">
-          <EslintIcon/>
-          <span className="text-gray-400">.eslintrc.json</span>
-        </button>
-        <button className=" flex gap-1 py-1 hover:bg-dark_border w-full px-8">
-          <GitignoreIcon />
-          <span className="text-gray-400">.gitignore</span>
-        </button>
-        <button className=" flex gap-1 py-1 hover:bg-dark_border w-full px-8">
-          <NextConfigIcon />
-          <span className="text-gray-400">next.config.js</span>
-        </button>
-        <button className=" flex gap-1 py-1 hover:bg-dark_border w-full px-8">
-          <PackagelockIcon />
-          <span className="text-gray-400">package-lock.json</span>
-        </button>
-        <button className=" flex gap-1 py-1 hover:bg-dark_border w-full px-8">
-          <PackagelockIcon />
-          <span className="text-gray-400">package.json</span>
-        </button>
-        <button className=" flex gap-1 py-1 hover:bg-dark_border w-full px-8">
-          <TailwindIcon />
-          <span className="text-gray-400">tailwind.config.ts</span>
-        </button>
-        <button className=" flex gap-1 py-1 hover:bg-dark_border w-full px-8">
-          <TsconfigIcon />
-          <span className="text-gray-400 ">tsconfig.json</span>
-        </button>
+        {lastItems.map((item,index)=>(
+        <button className=" flex gap-1 py-1 hover:bg-dark_border w-full px-8" key={index}>
+        {item.icon}
+        <span className="text-gray-400">{item.title}</span>
+      </button>
+        ))}
+        
       </div>
     </div>
   );

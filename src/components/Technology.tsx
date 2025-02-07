@@ -6,7 +6,7 @@ interface ITech{
 }
 const Technology=({Technologies}:ITech)=> {
   return (
-    <div className="w-full flex flex-col gap-4 px-10" id="technologies">
+    <div className="w-full flex flex-col gap-4 px-10">
       <div className="flex gap-2 w-full py-7 ">
         <div className="border-b border-b-white w-6"></div>
         <div className="border-b border-b-gray-400/40 w-full"></div>

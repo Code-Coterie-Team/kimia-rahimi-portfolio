@@ -33,6 +33,10 @@ export const useStore=create<IStoreState>((set)=>({
             setOpenProject:(value)=>set({openProject: value}),
             activeLink:" ",
             setActiveLink:(href)=>set({activeLink: href}),
+            activeSection:"aboutme",
+            setActiveSection:(id)=>set({activeSection:id}),
+            activeProject:"aboutme",
+            setActiveProject:(id)=>set({activeSection:id}),
 
 
         

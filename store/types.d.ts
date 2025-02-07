@@ -20,6 +20,10 @@ interface Link{
    openProject : string;
    setOpenProject:(value:string)=>void;
    activeLink:string;
-   setActiveLink:(href:string)=>void;
+   setActiveLink:(href:string)=>void; 
+   activeSection:string;
+   setActiveSection:(id:string)=>void;
+   activeProject:string;
+   setActiveProject:(id:string)=>void;
 
  }

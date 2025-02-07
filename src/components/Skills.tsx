@@ -48,18 +48,18 @@ useEffect(() => {
       <div className="flex gap-24 pt-10">
         <div className=" relative size-80 rounded-full flex justify-center items-center" style={{backgroundColor:color}}>
            <div className="bg-transparent absolute z-10 size-10/12">
-           <div className="absolute size-full rounded-full bg-gray-800 grid grid-cols-2 grid-rows-2 gap-3 rotate-45 ">
-            <button onClick={() => {setShowLanguage(true);setShowFront(false);setShowTools(false);}}>
+           <div className="absolute size-full rounded-full bg-gray-800 grid grid-cols-2 grid-rows-2 gap-3 rotate-45   p-4">
+            <button onClick={() => {setShowLanguage(true);setShowFront(false);setShowTools(false);}} className="bg-transparent border-none m-2">
                 <p className="text-3xl text-white font-semibold w-min -rotate-45 -translate-x-2">Languages
                     <span className=" -z-10 bg-[#525df3] absolute bottom-0 left-0 right-0 w-full h-4">
                         </span></p>
                 </button>
-                <button  onClick={() => {setShowTools(true);setShowLanguage(false);setShowFront(false);}}>
+                <button  onClick={() => {setShowTools(true);setShowLanguage(false);setShowFront(false);}} className="bg-transparent border-none m-2">
                 <p className="text-3xl text-white font-semibold w-min -rotate-45 translate-x-2 translate-y-10">Tools
                     <span className=" -z-10 bg-[#525df3] absolute bottom-0 left-0 right-0 w-full h-1">
                         </span></p>
                 </button>
-                <button onClick={() => {setShowFront(true);setShowLanguage(false);setShowTools(false);}}>
+                <button onClick={() => {setShowFront(true);setShowLanguage(false);setShowTools(false);}} className="bg-transparent border-none m-2">
                 <p className="text-3xl text-white font-semibold w-min -rotate-45 translate-x-11 -translate-y-1">Front
                     <span className=" -z-10 bg-[#525df3] absolute bottom-0 left-0 right-0 w-full h-1">
                         </span></p>

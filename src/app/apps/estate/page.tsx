@@ -12,15 +12,16 @@ import react from "@/assets/react-logo.webp"
 import redux from "@/assets/redux-logo.webp"
 import github from "@/assets/github-logo.webp"
 import MoreApp from '@/components/MoreApp'
+import AnimationProject from '@/components/AnimationProject'
 
 
 export default function Invoices() {
   return (
     <div className=" w-full flex flex-col gap-40">
-            <AboutProject title="Estate Landing Page" description="The 'Estate' project is a landing page for a company that showcases its services, client testimonials, and real estate projects." industry="Estate" year={2024} service='"Real estate consulting"' image={estate}/>
-            <Challenges/>
-            <Solution/>
-            <Technology Technologies={[{img:html,name:"HTML5"},{img:css,name:"CSS3"},{img:js,name:"JavaScript"},{img:react,name:"React"},{img:tailwind,name:"TailwindCSS"},{img:github,name:"Github"},{img:redux,name:"Redux"}]}/>
+            <AnimationProject id='about'><AboutProject title="Estate Landing Page" description="The 'Estate' project is a landing page for a company that showcases its services, client testimonials, and real estate projects." industry="Estate" year={2024} service='"Real estate consulting"' image={estate}/></AnimationProject>
+            <AnimationProject id='challenge'><Challenges/></AnimationProject>
+            <AnimationProject id='solution'><Solution/></AnimationProject>
+            <AnimationProject id='technologies'><Technology Technologies={[{img:html,name:"HTML5"},{img:css,name:"CSS3"},{img:js,name:"JavaScript"},{img:react,name:"React"},{img:tailwind,name:"TailwindCSS"},{img:github,name:"Github"},{img:redux,name:"Redux"}]}/></AnimationProject>
             <MoreApp title='Invoices App' link='/apps/invoices'/>
     </div>
   )
