@@ -26,8 +26,8 @@ const Mywork = ()=> {
       </span>
     </div>
     <div className="grid grid-row-2 gap-10 w-11/12 justify-center">
-      <Myproject title="The 'Invoices'" description="program is an efficient tool for managing quotes." image={invoices}/>
-      <Myproject title="The 'Estate-landing-page'" description="that allows users to easily view information about estate." image={estate}/>
+      <Myproject title="The Invoices" description="program is an efficient tool for managing quotes." image={invoices} href="/apps/invoices" name="Invoices App"/>
+      <Myproject title="The 'Estate-landing-page'" description="that allows users to easily view information about estate." image={estate} href="/apps/estate" name="Estate"/>
     </div>
     </div>
   )

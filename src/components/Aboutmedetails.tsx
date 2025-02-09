@@ -9,6 +9,7 @@ import GoIcon from "@/icons/GoIcon";
 import university from "@/assets/university.jpg"
 import {motion, useMotionTemplate, useMotionValue, useSpring } from "framer-motion";
 import { useState } from "react";
+import Link from "next/link";
 
 const Aboutme_details = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -109,10 +110,10 @@ const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
               </button>
             </a>
             <a href="">
-              <button className="flex gap-1 bg-zinc-100 py-1 px-3 text-zinc-900 items-center rounded-full text-sm">
+              <Link href={"/#contact"} className="flex gap-1 bg-zinc-100 py-1 px-3 text-zinc-900 items-center rounded-full text-sm shadow-lg hover:shadow-white/20">
                 <span className="font-medium">Contact Me</span>
                 <GoIcon className="size-5" />
-              </button>
+              </Link>
             </a>
           </div>
         </div>

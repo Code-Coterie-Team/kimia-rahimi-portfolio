@@ -7,10 +7,12 @@ import VerticalwindowIcon from "@/icons/VerticalwindowIcon";
 import { useStore } from "../../store/useSection";
 import ProjectIcon from "@/icons/ProjectIcon";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
 
 const Headercontent = () => {
 
-
+const path = usePathname();
 const {links,setLinks} = useStore();
 const {setActiveLink} = useStore();
 const handelDelete = (index:number)=>{
@@ -19,18 +21,23 @@ const handelDelete = (index:number)=>{
 }
 
 const handelSetLink = (href:string)=>{
-  setActiveLink(href)
+  setActiveLink(href);
 }
 
 
+
+
   return (
-    <div className="flex justify-between border-b-2 border-dark_border items-center w-full p-1 text-gray-400">
+    <div className="flex justify-between border-b-2 border-dark_border items-center w-full pt-1 text-gray-400">
        <div className="flex justify-between p-1">
        {links.map((item,index)=>(
-              <Link href={item.href} className="flex items-center gap-5 p-1 border-r-2 border-dark_border focus:border-b-2 focus:border-b-blue-500" key={index}  onClick={()=>handelSetLink(item.href)}>
+              <Link href={item.href} className={clsx("flex items-center gap-5 p-1 border-r-2 border-dark_border",{
+                "border-b-blue-500" : item.href === path,
+                "border-b-2": item.href === path
+              })} key={index}  onClick={()=>handelSetLink(item.href)}>
                <div className="flex items-center gap-1">
                {item.name === "About Me" ? <StarIcon/> : <ProjectIcon/> } 
-               <span>{item.name}</span>
+               <span className="px-1">{item.name}</span>
                </div>
               <button className="p-1 rounded-lg hover:bg-gray-300/10 " onClick={()=>handelDelete(index)}>
                 <ColseIcon />
@@ -38,6 +45,7 @@ const handelSetLink = (href:string)=>{
             </Link>
       ))}
        </div>
+       {/* "flex items-center gap-5 p-1 border-r-2 border-dark_border focus:border-b-2 focus:border-b-blue-500" */}
 
       <div className="flex items-center gap-3 p-1">
         <button className="p-1 rounded-lg hover:bg-gray-300/10">

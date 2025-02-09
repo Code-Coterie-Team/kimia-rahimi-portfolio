@@ -17,7 +17,6 @@ const Publicitems = () => {
   const [pathName, setPathName] = useState<string>("/#aboutme");
   const {addLink} = useStore();
 const {links} = useStore();
-console.log({links});
 const {setActiveLink} = useStore();
 
 const handelAddLink = (name:string,href:string)=>{

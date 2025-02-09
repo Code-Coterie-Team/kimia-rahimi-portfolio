@@ -2,15 +2,32 @@
 import ArrowIcon from "@/icons/ArrowIcon"
 import {motion, useMotionTemplate, useMotionValue, useSpring } from "framer-motion";
 import Image, { StaticImageData } from "next/image"
+import Link from "next/link";
 import { useState } from "react";
+import { useStore } from "../../store/useSection";
 
 interface IProject{
   title:string,
   description:string,
   image:StaticImageData,
+  href : string,
+  name:string
 }
 
-const Myproject = ({title,description,image}:IProject)=> {
+const Myproject = ({title,description,image,href,name}:IProject)=> {
+  const {links} = useStore()
+  const {addLink} = useStore();
+  const {setActiveLink} = useStore();
+
+  const addLinks = (name: string, href: string) => {
+    const existlink=links.some((l)=>l.href===href);
+    if(!existlink){
+        addLink({ name, href });
+        setActiveLink(href);
+    }
+}
+
+
   const [isHovered, setIsHovered] = useState(false);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -50,10 +67,10 @@ const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
      className=" border border-gray-500/20 bg-gray-900/20 rounded-2xl hover:shadow-md  hover:shadow-yellow-200 grid grid-cols-2">
     <div className="p-12 text-3xl flex flex-col gap-20">
       <div><span className="text-yellow-200">{title} <span className="text-white">{description}</span></span></div>
-      <div className="text-white flex items-center gap-2">
+      <Link href={href} className="text-white flex items-center gap-2" onClick={()=> addLinks(name,href)}>
         <button className="text-2xl font-semibold">Learn more</button>
         <ArrowIcon className="text-4xl"/>
-      </div>
+      </Link>
     </div>
     <div>
       <Image src={image} alt="" className="h-full rounded-tr-2xl rounded-br-2xl"/>

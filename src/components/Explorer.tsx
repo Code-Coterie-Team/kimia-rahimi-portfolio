@@ -41,9 +41,9 @@ const Explorer = () => {
             </div>
             <div className="flex flex-col overflow-hidden h-full">
               {menu.map((item, index) => (
-                <div key={index} className="overflow-auto">
+                <div key={index} className="overflow-y-auto">
                   <button
-                    className="border-b-2 border-dark_border w-full flex gap-1 py-1"
+                    className="border-b-2 border-dark_border w-full flex gap-1 py-1 "
                     onClick={() => toggleItems(item)}
                   >
                   <div                   

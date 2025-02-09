@@ -5,13 +5,6 @@ interface Link{
 
  
  interface IStoreState{
-     stylePublic:{
-         transform: string;
-         transition: string;
-         opacity:string
-     },
-     changeStyle:()=>void;
- 
    links:Link[];
    addLink:(newlink:Link)=>void;
    setLinks: (newLinks:Link[]) => void;
@@ -25,5 +18,7 @@ interface Link{
    setActiveSection:(id:string)=>void;
    activeProject:string;
    setActiveProject:(id:string)=>void;
+   isShowMain:boolean;
+   setIsShowMain:(value:boolean)=>void;
 
  }

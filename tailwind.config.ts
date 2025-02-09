@@ -30,6 +30,9 @@ export default {
         custom : "7% 88% 3%"
           
       },
+      boxShadow:{
+        skillscircle:"rgba(255, 255, 255, 0.1) -5px -5px 5px 0px, rgba(0, 0, 0, 0.4) 10px 10px 10px 0px, rgba(255, 255, 255, 0.2) -5px -5px 5px 0px inset, rgba(0, 0, 0, 0.4) 10px 10px 10px 0px inset"
+      }
 
     },
   },

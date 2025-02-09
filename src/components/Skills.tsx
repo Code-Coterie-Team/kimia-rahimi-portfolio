@@ -45,23 +45,24 @@ useEffect(() => {
       <div className="text-5xl pt-5 pb-7">
         <span className="text-indigo-400">Front-End <span className="text-white">software developer</span></span>
       </div>
-      <div className="flex gap-24 pt-10">
-        <div className=" relative size-80 rounded-full flex justify-center items-center" style={{backgroundColor:color}}>
-           <div className="bg-transparent absolute z-10 size-10/12">
-           <div className="absolute size-full rounded-full bg-gray-800 grid grid-cols-2 grid-rows-2 gap-3 rotate-45   p-4">
-            <button onClick={() => {setShowLanguage(true);setShowFront(false);setShowTools(false);}} className="bg-transparent border-none m-2">
-                <p className="text-3xl text-white font-semibold w-min -rotate-45 -translate-x-2">Languages
+      <div className="grid grid-cols-2 gap-16 px-5 pt-10">
+        <div className=" relative size-80 rounded-full flex justify-center items-center border border-black shadow-skillscircle" style={{backgroundColor:color}}>
+           <div className="bg-transparent absolute z-10 size-11/12">
+           <div className="absolute size-full rounded-full grid grid-cols-2 grid-rows-2 gap-2 rotate-45 p-4">
+            <button onClick={() => {setShowLanguage(true);setShowFront(false);setShowTools(false);}} className="bg-gray-800 border-none rounded-tl-full rounded-[500px] flex items-center justify-center">
+                <p className="text-3xl text-white font-semibold w-min -rotate-45 ">Languages
                     <span className=" -z-10 bg-[#525df3] absolute bottom-0 left-0 right-0 w-full h-4">
                         </span></p>
                 </button>
-                <button  onClick={() => {setShowTools(true);setShowLanguage(false);setShowFront(false);}} className="bg-transparent border-none m-2">
-                <p className="text-3xl text-white font-semibold w-min -rotate-45 translate-x-2 translate-y-10">Tools
+                {/*  rgba(255, 255, 255, 0.1) -5px -5px 5px 0px, rgba(0, 0, 0, 0.4) 10px 10px 10px 0px, rgba(255, 255, 255, 0.2) -5px -5px 5px 0px inset, rgba(0, 0, 0, 0.4) 10px 10px 10px 0px inset */}
+                <button  onClick={() => {setShowTools(true);setShowLanguage(false);setShowFront(false);}} className="bg-gray-800 border-none rounded-tr-full rounded-[500px] flex items-center justify-center pr-6">
+                <p className="text-3xl text-white font-semibold w-min -rotate-45">Tools
                     <span className=" -z-10 bg-[#525df3] absolute bottom-0 left-0 right-0 w-full h-1">
                         </span></p>
                 </button>
-                <button onClick={() => {setShowFront(true);setShowLanguage(false);setShowTools(false);}} className="bg-transparent border-none m-2">
-                <p className="text-3xl text-white font-semibold w-min -rotate-45 translate-x-11 -translate-y-1">Front
-                    <span className=" -z-10 bg-[#525df3] absolute bottom-0 left-0 right-0 w-full h-1">
+                <button onClick={() => {setShowFront(true);setShowLanguage(false);setShowTools(false);}} className="bg-gray-800 border-none rounded-bl-full rounded-[500px] flex items-center justify-center pl-3 pb-8">
+                <p className="text-3xl text-white font-semibold w-min -rotate-45">Front
+                    <span className=" -z-10 bg-[#525df3] absolute bottom-0 left-0 w-full h-1">
                         </span></p>
                 </button>
                 <button>
