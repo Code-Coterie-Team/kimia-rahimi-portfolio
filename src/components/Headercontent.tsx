@@ -35,10 +35,11 @@ const handelSetLink = (href:string)=>{
               <Link href={item.href} className={clsx("flex items-center gap-5 p-1 border-r-2 border-dark_border",{
                 "border-b-blue-500" : item.href === path,
                 "border-b-2": item.href === path
-              })} key={index}  onClick={()=>handelSetLink(item.href)}>
+              })}
+               key={index}  onClick={()=>handelSetLink(item.href)}>
                <div className="flex items-center gap-1">
                {item.name === "About Me" ? <StarIcon/> : <ProjectIcon/> } 
-               <span className="px-1">{item.name}</span>
+               <span className={clsx("px-1",{"text-public_button":item.href === path})}>{item.name}</span>
                </div>
               <button className="p-1 rounded-lg hover:bg-gray-300/10 " onClick={()=>handelDelete(index)}>
                 <ColseIcon />
@@ -46,7 +47,6 @@ const handelSetLink = (href:string)=>{
             </Link>
       ))}
        </div>
-       {/* "flex items-center gap-5 p-1 border-r-2 border-dark_border focus:border-b-2 focus:border-b-blue-500" */}
 
       <div className="flex items-center gap-3 p-1">
         <button className="p-1 rounded-lg hover:bg-gray-300/10">

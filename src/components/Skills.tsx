@@ -64,11 +64,6 @@ useEffect(() => {
                     <span className=" -z-10 bg-[#525df3] absolute bottom-0 left-0 w-full h-1">
                         </span></p>
                 </button>
-                <button>
-                <p className="text-3xl text-white font-semibold w-min -rotate-45 -translate-x-2">
-                    <span className=" -z-10 bg-[#525df3] absolute bottom-0 left-0 right-0 w-full h-[1.5rem]">
-                        </span></p>
-                </button>
             
             </div>
            </div>
