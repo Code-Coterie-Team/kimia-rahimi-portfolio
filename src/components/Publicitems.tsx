@@ -88,7 +88,7 @@ const handelAddLink = (name:string,href:string)=>{
       <div>
         <Link
           className=" flex gap-1 py-1 hover:bg-dark_border w-full px-8 bg-gray-600/40"
-          onClick={()=>{toggleState();handelAddLink("About Me" , "#aboutme")}}
+          onClick={()=>{toggleState();handelAddLink("About Me" , "/")}}
           href={"/#aboutme"}
         >
           <StarIcon />
@@ -99,7 +99,7 @@ const handelAddLink = (name:string,href:string)=>{
         <motion.div variants={sidebarMotion} initial="hidden" animate="visible">
           {items.map((item, index) => {
             return (
-              <motion.div key={index} variants={itemsMotion} initial="hidden" animate="visible">
+              <motion.div key={index} variants={itemsMotion}>
                 <Link
                   href={item.link}
                   className="flex gap-1 py-1 hover:bg-dark_border w-full px-14"

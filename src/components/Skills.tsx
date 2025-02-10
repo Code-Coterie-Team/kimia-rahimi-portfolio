@@ -54,7 +54,6 @@ useEffect(() => {
                     <span className=" -z-10 bg-[#525df3] absolute bottom-0 left-0 right-0 w-full h-4">
                         </span></p>
                 </button>
-                {/*  rgba(255, 255, 255, 0.1) -5px -5px 5px 0px, rgba(0, 0, 0, 0.4) 10px 10px 10px 0px, rgba(255, 255, 255, 0.2) -5px -5px 5px 0px inset, rgba(0, 0, 0, 0.4) 10px 10px 10px 0px inset */}
                 <button  onClick={() => {setShowTools(true);setShowLanguage(false);setShowFront(false);}} className="bg-gray-800 border-none rounded-tr-full rounded-[500px] flex items-center justify-center pr-6">
                 <p className="text-3xl text-white font-semibold w-min -rotate-45">Tools
                     <span className=" -z-10 bg-[#525df3] absolute bottom-0 left-0 right-0 w-full h-1">

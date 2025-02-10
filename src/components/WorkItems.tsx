@@ -2,6 +2,7 @@ import ProjectIcon from "@/icons/ProjectIcon"
 import { useStore } from "../../store/useSection"
 import Projctdetails from "./Projctdetails";
 import Link from "next/link";
+import clsx from "clsx";
 
 
 
@@ -38,7 +39,11 @@ const myWork = [{
     <div className="flex flex-col w-full text-base">
         {myWork.map((items,index)=>(
             <div key={index}>
-            <Link href={items.path}  className=" flex gap-1 py-1 hover:bg-dark_border w-full px-10" onClick={()=>{
+            <Link href={items.path}  className={clsx(" flex gap-1 py-1 hover:bg-dark_border w-full px-10",{
+                "bg-gray-400/30" : openProject === items.title
+            }
+                
+            )} onClick={()=>{
                 handleAddLink(items.title,items.path)
             }}>
                 <ProjectIcon/>

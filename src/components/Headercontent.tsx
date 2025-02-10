@@ -15,6 +15,7 @@ const Headercontent = () => {
 const path = usePathname();
 const {links,setLinks} = useStore();
 const {setActiveLink} = useStore();
+
 const handelDelete = (index:number)=>{
   const newLink = links.filter((_,i)=> i !== index)
   setLinks(newLink)

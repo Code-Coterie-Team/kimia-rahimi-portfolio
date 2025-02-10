@@ -8,6 +8,13 @@ interface ISkills{
 }
 
 const Myskills =({title,languages}:ISkills)=> {
+// const animatSkills = {
+//   hidden:{opacity:0},
+//   visible:{
+//     opacity:1,
+//     duration:{}
+//   }
+// }
   return (
     <div className="flex flex-col gap-14">
         <div><span className="text-3xl font-semibold text-white">{title}</span></div>
