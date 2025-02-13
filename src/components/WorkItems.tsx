@@ -32,6 +32,10 @@ const myWork = [{
 {
     title:"Estate",
     path : "/apps/estate"
+},
+{
+    title:"Filter App",
+    path:"/apps/filterapp"
 }
 ]
   return (

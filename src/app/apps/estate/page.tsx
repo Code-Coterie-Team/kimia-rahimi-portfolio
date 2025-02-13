@@ -22,7 +22,7 @@ export default function Invoices() {
             <AnimationProject id='challenge'><Challenges/></AnimationProject>
             <AnimationProject id='solution'><Solution/></AnimationProject>
             <AnimationProject id='technologies'><Technology Technologies={[{img:html,name:"HTML5"},{img:css,name:"CSS3"},{img:js,name:"JavaScript"},{img:react,name:"React"},{img:tailwind,name:"TailwindCSS"},{img:github,name:"Github"},{img:redux,name:"Redux"}]}/></AnimationProject>
-            <MoreApp title='Invoices App' link='/apps/invoices'/>
+            <MoreApp apps={[{title:"Invoice App",link:"/apps/invoices",date:"October 2023"},{title:"Filter App",link:"/apps/filterapp",date:"August 2023"}]}/>
     </div>
   )
 }

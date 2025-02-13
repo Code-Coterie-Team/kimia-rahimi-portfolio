@@ -3,6 +3,7 @@ import WorksIcon from "@/icons/WorksIcon"
 import invoices from "@/assets/invoices.png"
 import estate from "@/assets/estate.png"
 import Myproject from "./Myproject"
+import filterApp from "@/assets/filterapp.png"
 
 
 const Mywork = ()=> {
@@ -28,6 +29,7 @@ const Mywork = ()=> {
     <div className="grid grid-row-2 gap-10 w-11/12 justify-center">
       <Myproject title="The Invoices" description="program is an efficient tool for managing quotes." image={invoices} href="/apps/invoices" name="Invoices App"/>
       <Myproject title="The 'Estate-landing-page'" description="that allows users to easily view information about estate." image={estate} href="/apps/estate" name="Estate"/>
+      <Myproject title="The Filter App" description="a view of a furniture store with the ability to filter and search for products." image={filterApp} href="/apps/estate" name="Filter App"/>
     </div>
     </div>
   )
