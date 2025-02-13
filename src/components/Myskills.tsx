@@ -18,8 +18,8 @@ const animatSkills = {
 }
 
 const itemMotion = {
-  hidden:{opacity:0.2},
-  visible:{opacity:1,transition:{duration:0.1}}
+  hidden:{opacity:0,y:10},
+  visible:{opacity:1,y:0,transition:{duration:0.2}}
 }
   return (
     <div className="flex flex-col gap-14">
