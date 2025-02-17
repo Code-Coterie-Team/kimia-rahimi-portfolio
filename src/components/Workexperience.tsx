@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import BagIcon from "@/icons/BagIcon";
 import Experience from "./Experience";
 import nosa from "@/assets/nosa.png"

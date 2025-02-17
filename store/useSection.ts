@@ -27,9 +27,6 @@ export const useStore=create<IStoreState>()(
             setActiveSection:(id)=>set({activeSection:id}),
             activeProject:"",
             setActiveProject:(id)=>set({activeProject:id}),
-            isShowMain : true,
-            setIsShowMain:(value)=>set({isShowMain:value})
-      
       }
      ),
      {

@@ -18,7 +18,4 @@ interface Link{
    setActiveSection:(id:string)=>void;
    activeProject:string;
    setActiveProject:(id:string)=>void;
-   isShowMain:boolean;
-   setIsShowMain:(value:boolean)=>void;
-
  }

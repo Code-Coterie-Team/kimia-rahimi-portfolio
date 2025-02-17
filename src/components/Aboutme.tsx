@@ -38,7 +38,7 @@ const Aboutme: React.FC = () => {
     );
 
     return () => clearTimeout(timeoutId);
-  }, [index, isDeleting]);
+  }, [index, isDeleting,textArray]);
 
   return (
     <div className="h-full w-full pt-20">

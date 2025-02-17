@@ -21,7 +21,7 @@ export default function Invoices() {
             <AnimationProject id='about'><AboutProject title="Invoices App" description="The invoice management project allows users to easily create, edit, and track invoices." industry="Invoices" year={2024} service='"Invoice Management"' image={invoice}/></AnimationProject>
             <AnimationProject id='challenge'><Challenges/></AnimationProject>
             <AnimationProject id='solution'><Solution/></AnimationProject>
-            <AnimationProject id='technologie'><Technology Technologies={[{img:html,name:"HTML5"},{img:css,name:"CSS3"},{img:js,name:"JavaScript"},{img:react,name:"React"},{img:tailwind,name:"TailwindCSS"},{img:github,name:"Github"},{img:redux,name:"Redux"}]}/></AnimationProject>
+            <AnimationProject id='technologies'><Technology Technologies={[{img:html,name:"HTML5"},{img:css,name:"CSS3"},{img:js,name:"JavaScript"},{img:react,name:"React"},{img:tailwind,name:"TailwindCSS"},{img:github,name:"Github"},{img:redux,name:"Redux"}]}/></AnimationProject>
             <MoreApp apps={[{title:"Estate",link:"/apps/estate",date:"November 2023"},{title:"Filter App",link:"/apps/filterapp",date:"August 2023"},]}/>
     </div>
   )

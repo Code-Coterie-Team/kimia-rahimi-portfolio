@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import WorksIcon from "@/icons/WorksIcon"
 import invoices from "@/assets/invoices.png"
 import estate from "@/assets/estate.png"

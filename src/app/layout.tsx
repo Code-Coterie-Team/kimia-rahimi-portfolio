@@ -1,16 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {  Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Toolsbar from "@/components/Toolsbar";
 import Header from "@/components/Header";
 import Explorer from "@/components/Explorer";
 import Footer from "@/components/Footer";
-import Headercontent from "../components/Headercontent";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import Headercontent from "@/components/Headercontent";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -30,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-hidden`}
+        className={` ${geistMono.variable} antialiased overflow-hidden`}
       >
         <div className="grid grid-cols-custom grid-rows-custom h-full">
           <div className="col-span-3">

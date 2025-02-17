@@ -1,7 +1,6 @@
 import Image, { StaticImageData } from "next/image"
 import {motion} from "framer-motion"
 
-/* eslint-disable @next/next/no-img-element */
 interface ISkills{
    title:string,
    languages:{img:StaticImageData,name:string}[]
