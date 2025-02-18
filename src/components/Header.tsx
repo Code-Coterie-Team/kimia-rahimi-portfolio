@@ -1,4 +1,5 @@
 import ColseIcon from "@/icons/CloseIcon";
+import HamburgerIcon from "@/icons/HamburgerIcon";
 import HorizentalWindow from "@/icons/HorizentalWindow";
 import MaximizeIcon from "@/icons/MaximizeIcon";
 import MinimizeIcon from "@/icons/MinimizeIcon";
@@ -20,9 +21,10 @@ const Header = () => {
 
   return (
     <div className=" flex justify-between items-center text-gray-400 border-b-2 border-dark_border p-1">
-      <div className="flex justify-between p-1">
+      <div className="flex justify-between p-1 gap-5 md:gap-0">
         <VsIcon />
-        {Menu.map((item: string, index) => (
+      <div className=" hidden md:flex md:justify-between">
+      {Menu.map((item: string, index) => (
           <button
             className="py-1 px-2 rounded-lg hover:bg-gray-300/10"
             key={index}
@@ -31,7 +33,9 @@ const Header = () => {
           </button>
         ))}
       </div>
-      <div>
+      <HamburgerIcon className="md:hidden"/>
+      </div>
+      <div className="hidden md:inline">
         <span>Kimia Rahimi - Portfolio</span>
       </div>
       <div className="flex justify-between gap-2">

@@ -27,7 +27,7 @@ export default function RootLayout({
       <body
         className={` ${geistMono.variable} antialiased overflow-hidden`}
       >
-        <div className="grid grid-cols-custom grid-rows-custom h-full">
+        <div className="grid grid-cols-mobileCustom md:grid-cols-custom md:grid-rows-custom h-full overflow-hidden">
           <div className="col-span-3">
             <Header />
           </div>

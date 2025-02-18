@@ -23,11 +23,13 @@ export default {
       },
       gridTemplateColumns:{
         custom:"5% 20% 75%",
+        mobileCustom:"15% 65%",
         experience:"1fr 3fr",
         projects:" 10% 30% 30% 30%" 
       },
       gridTemplateRows: {
-        custom : "7% 88% 3%"
+        custom : "7% 88% 3%",
+        mobileCustom:"7% 90% 1%"
           
       },
       boxShadow:{
