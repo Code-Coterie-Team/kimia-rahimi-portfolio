@@ -4,12 +4,26 @@ import { useMotionTemplate, useMotionValue, useSpring } from "framer-motion";
 import Link from "next/link"
 import { useState } from "react";
 import {motion} from "framer-motion"
+import { useStore } from "../../store/useSection";
 interface IApp{
     title:string,
     link:string,
     date:string
 }
 const Otherapp=({title,link,date}:IApp)=> {
+    const {links} = useStore()
+    const {addLink} = useStore();
+    const {setActiveLink} = useStore();
+  
+    const addLinks = (name: string, href: string) => {
+      const existlink=links.some((l)=>l.href===href);
+      if(!existlink){
+          addLink({ name, href });
+          setActiveLink(href);
+      }
+  }
+
+
   const [isHovered, setIsHovered] = useState(false);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -59,7 +73,7 @@ const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
           </span>
         </div>
         <div>
-          <Link href={link}  className="text-white text-2xl font-semibold flex items-center gap-2">
+          <Link href={link}  className="text-white text-2xl font-semibold flex items-center gap-2" onClick={()=>addLinks(title,link)}>
            <span>Learn more</span>
            <ArrowIcon className="text-4xl"/>
           </Link>

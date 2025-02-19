@@ -9,9 +9,9 @@ import Workexperience from "./Workexperience";
 
 const Main = () => {
   return (
-      <div className=" w-full flex flex-col gap-72">
+      <div className="w-full flex flex-col gap-72">
             <AnimationComponent id="aboutme"><Aboutme /></AnimationComponent>
-            <AnimationComponent id="aboutme"><Aboutme_details/></AnimationComponent>
+            <div id="aboutme"><Aboutme_details /></div>
             <AnimationComponent id='work-experience'><Workexperience /></AnimationComponent>
             <AnimationComponent id="skills"><Skills /></AnimationComponent>
             <AnimationComponent id="my-work"><Mywork /></AnimationComponent>
