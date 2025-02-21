@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {  Geist_Mono } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Toolsbar from "@/components/Toolsbar";
 import Header from "@/components/Header";
@@ -24,25 +24,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="">
-      <body
-        className={` ${geistMono.variable} antialiased overflow-hidden`}
-      >
-        <div className="grid grid-cols-mobileCustom md:grid-cols-custom md:grid-rows-custom h-full overflow-hidden">
+      <body className={` ${geistMono.variable} antialiased overflow-hidden`}>
+        <div className="grid  grid-cols-min-min-one md:grid-rows-custom h-full overflow-hidden">
           <div className="col-span-3">
             <Header />
           </div>
           <Toolsbar />
           <Explorer />
 
-          <div className="grid grid-row-2 overflow-hidden h-full">
+          <div className="grid  overflow-hidden h-full">
             <div>
               <Headercontent />
             </div>
-            <div
-              className=" overflow-y-auto h-full "
-            >
-              {children}
-            </div>
+            <div className=" overflow-y-auto h-full ">{children}</div>
           </div>
           <div className="col-span-3">
             <Footer />

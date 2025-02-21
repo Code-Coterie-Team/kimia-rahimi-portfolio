@@ -3,7 +3,6 @@ import styles from "./Aboutme.module.css";
 import GithubIcon from "@/icons/GithubIcon";
 import GoIcon from "@/icons/GoIcon";
 import LinkedinIcon from "@/icons/LinkedinIcon";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 /* eslint-disable react/no-unescaped-entities */
@@ -38,7 +37,7 @@ const Aboutme: React.FC = () => {
     );
 
     return () => clearTimeout(timeoutId);
-  }, [index, isDeleting,textArray]);
+  }, [index, isDeleting, textArray]);
 
   return (
     <div className="h-full w-full pt-20">
@@ -72,13 +71,13 @@ const Aboutme: React.FC = () => {
               <GithubIcon width={24} height={24} className="text-white" />
             </button>
           </a>
-          <Link
+          <a
             href={"/#contact"}
             className="flex gap-1 bg-zinc-100 py-1 px-3 text-zinc-900 items-center rounded-full text-sm shadow-lg hover:shadow-white/20"
           >
             <span className="font-medium">Contact Me</span>
             <GoIcon className="size-5" />
-          </Link>
+          </a>
         </div>
       </div>
     </div>
