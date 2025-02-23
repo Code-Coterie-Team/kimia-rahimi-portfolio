@@ -27,6 +27,8 @@ export const useStore=create<IStoreState>()(
             setActiveSection:(id)=>set({activeSection:id}),
             activeProject:"",
             setActiveProject:(id)=>set({activeProject:id}),
+            showExploreItems:true,
+            setShowExploreItems:(value)=>set({showExploreItems:value})
       }
      ),
      {

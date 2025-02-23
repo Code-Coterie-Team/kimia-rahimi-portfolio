@@ -18,4 +18,6 @@ interface Link{
    setActiveSection:(id:string)=>void;
    activeProject:string;
    setActiveProject:(id:string)=>void;
+   showExploreItems:boolean;
+   setShowExploreItems:(value:boolean)=>void;
  }

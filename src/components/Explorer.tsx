@@ -30,6 +30,7 @@ const Explorer = () => {
   };
 
   const menu = ["Open Editors", "Portfolio", "Outline", "Timeline", "Scripts"];
+  const {showExploreItems} = useStore();
 
   return (
     <div>
@@ -39,7 +40,7 @@ const Explorer = () => {
           showExplore && "hidden"
         )}
       >
-        <div className="flex flex-col gap-2 text-gray-400 text-sm pt-5 overflow-hidden h-full ">
+        {showExploreItems && <div className="flex flex-col gap-2 text-gray-400 text-sm pt-5 overflow-hidden h-full ">
           <>
             <div className=" flex justify-between px-3">
               <span className="text-xs">EXPLORER</span>
@@ -76,7 +77,7 @@ const Explorer = () => {
               ))}
             </div>
           </>
-        </div>
+        </div>}
       </div>
     </div>
   );
