@@ -45,7 +45,7 @@ useEffect(() => {
       <div className="text-5xl pt-5 pb-7">
         <span className="text-indigo-400">Front-End <span className="text-white">software developer</span></span>
       </div>
-      <div className="grid grid-cols-2 gap-16 px-5 pt-10">
+      <div className="grid grid-row-2 md:grid-cols-2 gap-16 px-5 pt-10">
         <div className=" relative size-80 rounded-full flex justify-center items-center border border-black shadow-skillscircle" style={{backgroundColor:color}}>
            <div className="bg-transparent absolute z-10 size-11/12">
            <div className="absolute size-full rounded-full grid grid-cols-2 grid-rows-2 gap-2 rotate-45 p-4">

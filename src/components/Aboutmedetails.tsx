@@ -76,7 +76,7 @@ const Aboutme_details = () => {
           </span>
         </div>
       </AnimationComponent>
-      <div className="flex gap-44">
+      <div className="flex gap-14 md:gap-44">
         <div className="flex flex-col gap-2 max-w-[35rem]">
           <div className="flex flex-col gap-1">
             <span className="text-white font-semibold text-lg">
@@ -97,17 +97,18 @@ const Aboutme_details = () => {
           variants={animateItem}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
+          className="w-full"
         >
           <Image
             src={kimiarahimi}
             alt=""
-            className="rounded-full"
+            className="rounded-full h-full"
             height={200}
             width={200}
           />
         </motion.div>
       </div>
-      <div className="flex gap-36">
+      <div className="flex flex-col gap-20 md:flex-row md:gap-36">
         <AnimationComponent id="">
           <div className="flex flex-col gap-4 w-80">
             <p className="text-profile_color border-b border-gray-400/40 pb-3 w-full">
