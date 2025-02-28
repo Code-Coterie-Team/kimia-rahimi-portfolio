@@ -20,4 +20,5 @@ interface Link{
    setActiveProject:(id:string)=>void;
    showExploreItems:boolean;
    setShowExploreItems:(value:boolean)=>void;
+   removeLink:(name:string)=>void;
  }

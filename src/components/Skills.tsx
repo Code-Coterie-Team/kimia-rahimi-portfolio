@@ -49,21 +49,21 @@ useEffect(() => {
         <div className=" relative size-80 rounded-full flex justify-center items-center border border-black shadow-skillscircle" style={{backgroundColor:color}}>
            <div className="bg-transparent absolute z-10 size-11/12">
            <div className="absolute size-full rounded-full grid grid-cols-2 grid-rows-2 gap-2 rotate-45 p-4">
-            <button onClick={() => {setShowLanguage(true);setShowFront(false);setShowTools(false);}} className="bg-gray-800 border-none rounded-tl-full rounded-[500px] flex items-center justify-center">
+            <div onClick={() => {setShowLanguage(true);setShowFront(false);setShowTools(false);}} className="bg-gray-800 border-none rounded-tl-full rounded-[500px] flex items-center justify-center cursor-pointer">
                 <p className="text-3xl text-white font-semibold w-min -rotate-45 ">Languages
                     <span className=" -z-10 bg-[#525df3] absolute bottom-0 left-0 right-0 w-full h-4">
                         </span></p>
-                </button>
-                <button  onClick={() => {setShowTools(true);setShowLanguage(false);setShowFront(false);}} className="bg-gray-800 border-none rounded-tr-full rounded-[500px] flex items-center justify-center pr-6">
+                </div>
+                <div  onClick={() => {setShowTools(true);setShowLanguage(false);setShowFront(false);}} className="bg-gray-800 border-none rounded-tr-full rounded-[500px] flex items-center justify-center pr-6 cursor-pointer">
                 <p className="text-3xl text-white font-semibold w-min -rotate-45">Tools
                     <span className=" -z-10 bg-[#525df3] absolute bottom-0 left-0 right-0 w-full h-1">
                         </span></p>
-                </button>
-                <button onClick={() => {setShowFront(true);setShowLanguage(false);setShowTools(false);}} className="bg-gray-800 border-none rounded-bl-full rounded-[500px] flex items-center justify-center pl-3 pb-8">
+                </div>
+                <div onClick={() => {setShowFront(true);setShowLanguage(false);setShowTools(false);}} className="bg-gray-800 border-none rounded-bl-full rounded-[500px] flex items-center justify-center pl-3 pb-8 cursor-pointer">
                 <p className="text-3xl text-white font-semibold w-min -rotate-45">Front
                     <span className=" -z-10 bg-[#525df3] absolute bottom-0 left-0 w-full h-1">
                         </span></p>
-                </button>
+                </div>
             
             </div>
            </div>

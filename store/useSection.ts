@@ -3,7 +3,7 @@ import { persist } from "zustand/middleware";
 
 export const useStore=create<IStoreState>()(
  persist(
-     (set) => (
+     (set,get) => (
       {
         links:[{name:"About Me",href:"/"}],         
         addLink: (newlink) =>
@@ -28,7 +28,14 @@ export const useStore=create<IStoreState>()(
             activeProject:"",
             setActiveProject:(id)=>set({activeProject:id}),
             showExploreItems:true,
-            setShowExploreItems:(value)=>set({showExploreItems:value})
+            setShowExploreItems:(value)=>set({showExploreItems:value}),
+            removeLink:(href)=>{
+            const {links} = get();
+            if (links.length>1){
+              const filterLink = links.filter((link)=>link.href !== href);
+              set ({links : filterLink})
+            }
+            }
       }
      ),
      {

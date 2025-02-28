@@ -13,19 +13,18 @@ import clsx from "clsx";
 const Headercontent = () => {
 
 const path = usePathname();
-const {links,setLinks} = useStore();
+const {links} = useStore();
 const {setActiveLink} = useStore();
+const {removeLink} = useStore();
 
-const handelDelete = (index:number)=>{
-  const newLink = links.filter((_,i)=> i !== index)
-  setLinks(newLink)
+const handelDelete = (href:string)=>{
+ removeLink(href)
 }
 
-const handelSetLink = (href:string)=>{
+
+const setLink = (href: string) => {
   setActiveLink(href);
-}
-
-
+};
 
 
   return (
@@ -36,12 +35,12 @@ const handelSetLink = (href:string)=>{
                 "border-b-blue-500" : item.href === path,
                 "border-b-2": item.href === path
               })}
-               key={index}  onClick={()=>handelSetLink(item.href)}>
+               key={index}  onClick={()=>setLink(item.href)}>
                <div className="flex items-center gap-1">
                {item.name === "About Me" ? <StarIcon/> : <ProjectIcon/> } 
                <span className={clsx("px-1",{"text-public_button":item.href === path})}>{item.name}</span>
                </div>
-              <button className="p-1 rounded-lg hover:bg-gray-300/10 " onClick={()=>handelDelete(index)}>
+              <button className="p-1 rounded-lg hover:bg-gray-300/10 " onClick={()=>handelDelete(item.href)}>
                 <ColseIcon />
               </button>
             </Link>
