@@ -152,7 +152,7 @@ const Aboutme_details = () => {
           </div>
         </AnimationComponent>
         <motion.div
-          className="p-12 border border-gray-500/20 bg-gray-900/20 rounded-2xl hover:shadow-md  hover:shadow-profile_color"
+          className="w-full md:w-auto p-12 border border-gray-500/20 bg-gray-900/20 rounded-2xl hover:shadow-md  hover:shadow-profile_color"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           onMouseMove={handleMouseMove}
