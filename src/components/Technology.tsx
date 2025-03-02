@@ -1,4 +1,7 @@
+"use client"
+
 import Image, { StaticImageData } from "next/image"
+import GuidanceDownwards from "./GuidanceDownwards"
 
 interface ITech{
     Technologies:{img:StaticImageData,name:string}[]
@@ -6,7 +9,8 @@ interface ITech{
 }
 const Technology=({Technologies}:ITech)=> {
   return (
-    <div className="w-full flex flex-col gap-4 px-10">
+    <div className="flex flex-col gap-40">
+      <div className="w-full flex flex-col gap-4 px-10">
       <div className="flex gap-2 w-full py-7 ">
         <div className="border-b border-b-white w-6"></div>
         <div className="border-b border-b-gray-400/40 w-full"></div>
@@ -22,6 +26,8 @@ const Technology=({Technologies}:ITech)=> {
         ))}
       </div>
       </div>
+    </div>
+    <GuidanceDownwards/>
     </div>
   )
 }

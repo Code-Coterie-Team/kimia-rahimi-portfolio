@@ -4,6 +4,7 @@ import GithubIcon from "@/icons/GithubIcon";
 import GoIcon from "@/icons/GoIcon";
 import LinkedinIcon from "@/icons/LinkedinIcon";
 import { useEffect, useState } from "react";
+import GuidanceDownwards from "./GuidanceDownwards";
 
 /* eslint-disable react/no-unescaped-entities */
 const Aboutme: React.FC = () => {
@@ -40,7 +41,7 @@ const Aboutme: React.FC = () => {
   }, [index, isDeleting, textArray]);
 
   return (
-    <div className="h-full w-full pt-20">
+    <div className="h-full w-full pt-20 flex flex-col gap-20">
       <div className="flex flex-col gap-5 text-white px-7 pb-20">
         <div>
           <h1 className="text-6xl font-medium">
@@ -79,7 +80,9 @@ const Aboutme: React.FC = () => {
             <GoIcon className="size-5" />
           </a>
         </div>
+
       </div>
+      <GuidanceDownwards/>
     </div>
   );
 };

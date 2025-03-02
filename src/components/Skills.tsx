@@ -14,6 +14,7 @@ import github from "@/assets/github-logo.webp"
 import redux from "@/assets/redux-logo.webp"
 import eslint from "@/assets/eslint-logo.webp"
 import Myskills from "./Myskills";
+import GuidanceDownwards from "./GuidanceDownwards";
 
 
 const Skills = () => {
@@ -32,7 +33,8 @@ useEffect(() => {
         }, []);
 
   return (
-    <div className="w-full flex flex-col gap-8 px-10">
+   <div className="flex flex-col gap-40">
+     <div className="w-full flex flex-col gap-8 px-10">
       <div className="flex gap-2 w-full py-7 ">
         <div className="border-b border-b-white w-6"></div>
         <div className="border-b border-b-gray-400/40 w-full"></div>
@@ -76,6 +78,8 @@ useEffect(() => {
       </div>
 
     </div>
+    <GuidanceDownwards/>
+   </div>
   );
 };
 

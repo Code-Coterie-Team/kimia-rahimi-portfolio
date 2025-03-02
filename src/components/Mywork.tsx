@@ -1,13 +1,16 @@
+"use client"
 import WorksIcon from "@/icons/WorksIcon"
 import invoices from "@/assets/invoices.png"
 import estate from "@/assets/estate.png"
 import Myproject from "./Myproject"
 import filterApp from "@/assets/filterapp.png"
+import GuidanceDownwards from "./GuidanceDownwards"
 
 
 const Mywork = ()=> {
   return (
-    <div className="w-full flex flex-col gap-8 px-10">
+    <div className="flex flex-col gap-40">
+     <div className="w-full flex flex-col gap-8 px-10">
     <div className="flex gap-2 w-full py-7 ">
       <div className="border-b border-b-white w-6"></div>
       <div className="border-b border-b-gray-400/40 w-full"></div>
@@ -30,6 +33,8 @@ const Mywork = ()=> {
       <Myproject title="The 'Estate-landing-page'" description="that allows users to easily view information about estate." image={estate} href="/apps/estate" name="Estate"/>
       <Myproject title="The Filter App" description="a view of a furniture store with the ability to filter and search for products." image={filterApp} href="/apps/estate" name="Filter App"/>
     </div>
+    </div> 
+    <GuidanceDownwards/>
     </div>
   )
 }

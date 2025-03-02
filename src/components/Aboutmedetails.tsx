@@ -16,6 +16,7 @@ import {
 } from "framer-motion";
 import { useRef, useState } from "react";
 import AnimationComponent from "./AnimationComponent";
+import GuidanceDownwards from "./GuidanceDownwards";
 
 const Aboutme_details = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -60,6 +61,7 @@ const Aboutme_details = () => {
   };
 
   return (
+   <div className="flex flex-col gap-40">
     <div className="w-full flex flex-col gap-8 px-10">
       <div className="flex gap-2 w-full py-7 ">
         <div className="border-b border-b-white w-6"></div>
@@ -183,7 +185,9 @@ const Aboutme_details = () => {
           </div>
         </motion.div>
       </div>
-    </div>
+    </div> 
+    <GuidanceDownwards/>
+   </div>
   );
 };
 
