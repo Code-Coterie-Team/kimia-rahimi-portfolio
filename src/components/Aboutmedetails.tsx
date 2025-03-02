@@ -20,8 +20,9 @@ import AnimationComponent from "./AnimationComponent";
 const Aboutme_details = () => {
   const [isHovered, setIsHovered] = useState(false);
   const ref = useRef(null);
+  const refUni = useRef(null);
   const inViewMyImage = useInView(ref);
-  const inViewUniversity = useInView(ref) 
+  const inViewUniversity = useInView(refUni) 
 
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -49,6 +50,11 @@ const Aboutme_details = () => {
   const spotlightBackground = useMotionTemplate`radial-gradient(circle at ${mouseXSpring}% ${mouseYSpring}%,rgba(74, 222, 128,0.1),rgb(30 ,35, 54 ))`;
 
   const animateItem = {
+    hidden: { opacity: 0, x: 30 },
+    visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+  };
+
+  const animateItemUni = {
     hidden: { opacity: 0, x: 30 },
     visible: { opacity: 1, x: 0, transition: { duration: 1 } },
   };
@@ -153,7 +159,8 @@ const Aboutme_details = () => {
           style={{
             background: isHovered ? spotlightBackground : "bg-gray-900/20",
           }}
-          variants={animateItem}
+          ref={refUni}
+          variants={animateItemUni}
           initial="hidden"
           animate={inViewUniversity ? "visible" : "hidden"}
         >
