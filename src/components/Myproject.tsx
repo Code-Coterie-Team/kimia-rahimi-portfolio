@@ -64,9 +64,9 @@ const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     style={{
         background: isHovered ? spotlightBackground : "bg-gray-900/20",
     }}
-     className=" border border-gray-500/20 bg-gray-900/20 rounded-2xl hover:shadow-md  hover:shadow-yellow-200 grid grid-cols-2">
-    <div className="p-12 text-3xl flex flex-col gap-20">
-      <div><span className="text-yellow-200">{title} <span className="text-white">{description}</span></span></div>
+     className=" border border-gray-500/20 bg-gray-900/20 rounded-2xl hover:shadow-md  hover:shadow-yellow-200 grid grid-row-2 md:grid-cols-2">
+    <div className="p-5 md:p-12 text-3xl flex flex-col gap-10 md:gap-20">
+      <div><span className=" text-2xl md:text-3xl text-yellow-200">{title} <span className="text-white">{description}</span></span></div>
       <Link href={href} className="text-white flex items-center gap-2" onClick={()=> addLinks(name,href)}>
         <button className="text-2xl font-semibold">Learn more</button>
         <ArrowIcon className="text-4xl"/>

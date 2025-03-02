@@ -23,7 +23,7 @@ const itemMotion = {
   return (
     <div className="flex flex-col gap-14 justify-center items-center md:justify-normal md:items-start">
         <div><span className="text-3xl font-semibold text-white">{title}</span></div>
-        <motion.div className="grid grid-rows md:grid-cols-5 gap-10" variants={animatSkills} initial="hidden" animate="visible">
+        <motion.div className="grid grid-cols-3 md:grid-cols-5 gap-10" variants={animatSkills} initial="hidden" animate="visible">
             {languages.map((items,index:number)=>(
                 <motion.div className="flex flex-col gap-3 items-center" key={index} variants={itemMotion}>
                     <Image src={items.img} alt="" className="w-[4rem] h-[2.5rem] md:size-14 rounded-md"/>
