@@ -20,7 +20,8 @@ import AnimationComponent from "./AnimationComponent";
 const Aboutme_details = () => {
   const [isHovered, setIsHovered] = useState(false);
   const ref = useRef(null);
-  const inView = useInView(ref);
+  const inViewMyImage = useInView(ref);
+  const inViewUniversity = useInView(ref) 
 
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -41,7 +42,6 @@ const Aboutme_details = () => {
 
   const handleMouseLeave = () => {
     setIsHovered(false);
-    // why???
     mouseX.set(0);
     mouseY.set(0);
   };
@@ -96,7 +96,7 @@ const Aboutme_details = () => {
           ref={ref}
           variants={animateItem}
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          animate={inViewMyImage ? "visible" : "hidden"}
         >
           <Image
             src={kimiarahimi}
@@ -155,7 +155,7 @@ const Aboutme_details = () => {
           }}
           variants={animateItem}
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          animate={inViewUniversity ? "visible" : "hidden"}
         >
           <div className="flex gap-7">
             <Image
