@@ -37,7 +37,9 @@ const Header = () => {
             </button>
           ))}
         </div>
-        <HamburgerIcon className="md:hidden" />
+        <button onClick={() => {
+            setShowExplore(!showExplore);
+          }} ><HamburgerIcon className="md:hidden" /></button>
       </div>
       <div className="hidden md:inline">
         <span>Kimia Rahimi - Portfolio</span>

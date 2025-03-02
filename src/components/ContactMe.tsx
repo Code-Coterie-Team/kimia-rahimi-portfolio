@@ -3,7 +3,7 @@ import MessageIcon from "@/icons/MessageIcon"
 
 const ContactMe = ()=> {
   return (
-    <div className="w-full flex flex-col gap-8 px-10">
+    <div className="w-full flex flex-col gap-3 md:gap-8 px-10">
     <div className="flex gap-2 w-full py-7 ">
       <div className="border-b border-b-white w-6"></div>
       <div className="border-b border-b-gray-400/40 w-full"></div>
@@ -21,7 +21,8 @@ const ContactMe = ()=> {
       </span>
     </div>
     <div>
-        <form className="w-11/12 py-10 flex flex-col rounded-xl text-white text-base">
+        <div className="flex flex-col w-11/12 py-10 gap-5 items-end ">
+        <form className="w-full flex flex-col rounded-xl text-white text-base">
         <div className=" flex flex-col border border-gray-400/40 rounded-tl-lg rounded-tr-lg p-4 focus-within:border-blue-400 focus-within:border-2 group">
             <label htmlFor="" className="relative group-focus-within:text-blue-400 group-focus-within:-top-2 group-focus-within:text-sm">Name</label>
             <input type="text" className="bg-transparent outline-none" />
@@ -39,8 +40,12 @@ const ContactMe = ()=> {
             <input type="text" className="bg-transparent outline-none" />
         </div>
         
-
+        
         </form>
+        <button className="flex justify-center bg-white w-16 rounded-full font-semibold">send</button>
+        </div>
+         
+        
     </div>
     </div>
 
