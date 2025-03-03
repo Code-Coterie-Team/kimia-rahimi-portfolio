@@ -24,29 +24,29 @@ const Toolsbar = () => {
   };
 
   return (
-    <div className="flex flex-col justify-between text-buttons/50 hover: opacity-90 p-4">
-      <div className="flex flex-col gap-6">
-        <button className="hover:text-buttons/90" onClick={handleClick}>
+    <div className="flex flex-col justify-between text-buttons/50 hover: opacity-90">
+      <div className="grid grid-rows-5 gap-1 ">
+        <button className="hover:text-buttons/90 p-3 focus:border-l-2 border-gray-400" onClick={handleClick}>
           <ExplorerIcon />
         </button>
-        <button className="hover:text-buttons/90" onClick={() => setShowExploreItems(false)}>
+        <button className="hover:text-buttons/90 p-3 focus:border-l-2 border-gray-400" onClick={() => setShowExploreItems(false)}>
           <SearchIcon />
         </button>
-        <button className="hover:text-buttons/90" onClick={() => setShowExploreItems(false)}>
+        <button className="hover:text-buttons/90 p-3 focus:border-l-2 border-gray-400" onClick={() => setShowExploreItems(false)}>
           <SourceControlIcon />
         </button>
-        <button className="hover:text-buttons/90" onClick={() => setShowExploreItems(false)}>
+        <button className="hover:text-buttons/90 p-3 focus:border-l-2 border-gray-400" onClick={() => setShowExploreItems(false)}>
           <RunIcon />
         </button>
-        <button className="hover:text-buttons/90" onClick={() => setShowExploreItems(false)}>
+        <button className="hover:text-buttons/90 p-3 focus:border-l-2 border-gray-400" onClick={() => setShowExploreItems(false)}>
           <ExtensionsIcon />
         </button>
       </div>
-      <div className="flex flex-col gap-6">
-        <button className="hover:text-buttons/90">
+      <div className="flex flex-col ">
+        <button className="hover:text-buttons/90 p-3">
           <ProfileIcon />
         </button>
-        <button className="hover:text-buttons/90">
+        <button className="hover:text-buttons/90 p-3">
           <SettingIcon />
         </button>
       </div>
