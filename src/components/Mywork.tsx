@@ -29,9 +29,10 @@ const Mywork = ()=> {
       </span>
     </div>
     <div className="grid grid-row-3 gap-10 w-full md:w-11/12 justify-center">
-      <Myproject title="The Invoices" description="program is an efficient tool for managing quotes." image={invoices} href="/apps/invoices" name="Invoices App" linkDemo="https://invoice-app-kimia.netlify.app/demo" linkGit="https://github.com/Code-Coterie-Team/invoices-app"/>
+      <Myproject title="The Invoices" description="program is an efficient tool for managing quotes." image={invoices} href="/apps/invoices" name="Invoices App" linkDemo="https://react-invoice-kimia.netlify.app/demo"
+      linkGit="https://github.com/Code-Coterie-Team/invoices-app"/>
       <Myproject title="The 'Estate-landing-page'" description="that allows users to easily view information about estate." image={estate} href="/apps/estate" name="Estate" linkDemo="https://estate-landing-kimia.netlify.app/" linkGit="https://github.com/Code-Coterie-Team/estate-landing-page"/>
-      <Myproject title="The Filter App" description="a view of a furniture store with the ability to filter and search for products." image={filterApp} href="/apps/estate" name="Filter App" linkDemo="" linkGit=""/>
+      <Myproject title="The Filter App" description="a view of a furniture store with the ability to filter and search for products." image={filterApp} href="/apps/estate" name="Filter App" linkDemo="https://filterappkimia.netlify.app/" linkGit="https://github.com/Code-Coterie-Team/filter-app"/>
     </div>
     </div> 
     <GuidanceDownwards/>
