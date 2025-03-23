@@ -32,7 +32,7 @@ export default function RootLayout({
           <Toolsbar />
           <Explorer />
 
-          <div className="grid  overflow-hidden h-full">
+          <div className="grid overflow-hidden h-full">
             <div>
               <Headercontent />
             </div>

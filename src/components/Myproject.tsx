@@ -5,16 +5,20 @@ import Image, { StaticImageData } from "next/image"
 import Link from "next/link";
 import { useState } from "react";
 import { useStore } from "../../store/useSection";
+import DemoIcon from "@/icons/DemoIcon";
+import GitIcon from "@/icons/GitIcon";
 
 interface IProject{
   title:string,
   description:string,
   image:StaticImageData,
   href : string,
-  name:string
+  name:string,
+  linkDemo:string,
+  linkGit:string
 }
 
-const Myproject = ({title,description,image,href,name}:IProject)=> {
+const Myproject = ({title,description,image,href,name,linkDemo,linkGit}:IProject)=> {
   const {links} = useStore()
   const {addLink} = useStore();
   const {setActiveLink} = useStore();
@@ -48,7 +52,6 @@ const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
 
   const handleMouseLeave = () => {
     setIsHovered(false);
-    // why???
     mouseX.set(0);    
     mouseY.set(0);
 
@@ -72,7 +75,11 @@ const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
         <ArrowIcon className="text-4xl"/>
       </Link>
     </div>
-    <div>
+    <div className="relative flex justify-center items-center">
+    <div className="flex gap-4 absolute">
+      <a className="bg-gray-400/60 rounded-full size-12 flex justify-center items-center hover:scale-125" href={linkDemo} target="_blank"><DemoIcon className="text-white size-6"/></a>
+      <a className="bg-gray-400/6~0 rounded-full size-12 flex justify-center items-center hover:scale-125"  href={linkGit} target="_blank"><GitIcon className="text-white size-6"/></a>
+      </div>
       <Image src={image} alt="" className="h-full rounded-tr-2xl rounded-br-2xl"/>
     </div>
     </motion.div>

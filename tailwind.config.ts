@@ -21,7 +21,6 @@ export default {
       },
       gridTemplateColumns: {
         custom: "5% 20% 75%",
-        mobileCustom: "15% 65%",
         experience: "1fr 3fr",
         projects: " 10% 30% 30% 30%",
         "min-min-one": "min-content min-content 1fr",
@@ -31,11 +30,11 @@ export default {
       },
       gridTemplateRows: {
         custom: "7% 88% 3%",
-        mobileCustom: "7% 90% 1%",
         "min-min-one": "min-content min-content 1fr",
         "min-one-min": "min-content 1fr min-content",
         "min-one": "min-content 1fr",
         "one-min": "1fr min-content",
+        header:"5% 95%"
       },
 
       boxShadow: {

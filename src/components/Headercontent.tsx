@@ -29,7 +29,7 @@ const setLink = (href: string) => {
 
   return (
     <div className="flex justify-between border-b-2 border-dark_border items-center w-full pt-1 text-gray-400">
-       <div className="flex justify-between p-1">
+       <div className="flex justify-between p-1 overflow-x-scroll md:overflow-x-hidden">
        {links.map((item,index)=>(
               <Link href={item.href} className={clsx("flex items-center gap-5 p-1 border-r-2 border-dark_border",{
                 "border-b-blue-500" : item.href === path,

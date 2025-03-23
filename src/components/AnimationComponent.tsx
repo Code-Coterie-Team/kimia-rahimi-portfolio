@@ -4,7 +4,6 @@ import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useStore } from "../../store/useSection";
 
-
 const AnimationComponent = ({
   id,
   children,
@@ -12,13 +11,13 @@ const AnimationComponent = ({
   id: string;
   children: React.ReactNode;
 }) => {
-  const ref = useRef(null)
-  const isInView = useInView(ref, {amount:0.1});
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 0.1 });
   const { setActiveSection } = useStore();
 
   useEffect(() => {
     if (isInView) setActiveSection(id);
-  }, [isInView,id,setActiveSection]);
+  }, [isInView, id, setActiveSection]);
 
   const animationVariants = {
     hidden: { opacity: 0, x: -30 },
