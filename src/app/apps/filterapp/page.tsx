@@ -16,10 +16,10 @@ import AnimationProject from '@/components/AnimationProject'
 
 export default function FilterApp() {
   return (
-    <div className=" w-full flex flex-col gap-52">
+    <div className=" w-full flex flex-col gap-6">
             <AnimationProject id='about'><AboutProject title="Filter App" description="a view of a furniture store with the ability to filter and search for products." industry="Furniture Store" year={2024} service="'Smart Filter'" image={filterapp}/></AnimationProject>
-            <AnimationProject id='challenge'><Challenges/></AnimationProject>
-            <AnimationProject id='solution'><Solution/></AnimationProject>
+            <AnimationProject id='challenge'><Challenges challenge={[{desc:"Implementing simultaneous filtering and searching of products."},{desc:"Managing state for filters and search results."}]}/></AnimationProject>
+            <AnimationProject id='solution'><Solution solution={[{desc:" Using useState for state management and combining filters with search."},{desc:"Implementing separate components for filtering and displaying products."}]}/></AnimationProject>
             <AnimationProject id='technologie'><Technology Technologies={[{img:html,name:"HTML5"},{img:css,name:"CSS3"},{img:js,name:"JavaScript"},{img:react,name:"React"},{img:tailwind,name:"TailwindCSS"},{img:github,name:"Github"}]}/></AnimationProject>
             <MoreApp apps={[{title:"Invoice App",link:"/apps/invoices",date:"October 2023"},{title:"Estate",link:"/apps/estate",date:"November 2023"}]}/>
     </div>
